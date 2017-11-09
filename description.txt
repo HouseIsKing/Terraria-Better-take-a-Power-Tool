@@ -1,0 +1,66 @@
+Better take a Power Tool adds new drills/chainsaws/jackhammers/jackhamsaws based on all pickaxes/axes/hammers/hamaxes that do not have a drill/chainsaw/jackhammer/jackhamsaw counterpart in Terraria.
+
+v1.4.3:
+
+    Making The Lunar Drills Obtainable
+    Added Fungus Drill & Jackhamsaw
+    Added Drill of Bloom their only drop in Not Expert mode in Expert mode you can craft it with their counterpart
+    Added Argite Drill
+
+v1.4.2:
+
+    Added Night Twilight & Sacrifical Drill
+
+v1.4.1:
+
+    Added the Item tooltips back with his Translations but not completely for Simplified Chinese because I can't get the Symbols
+
+v1.4:
+
+    Update to Terraria 1.3.5.2
+    The first Tremor tools are added they only exist if you have Tremor installed
+    Rebalance The Crusher (Demonite jackhammer) has now 17 useTime & 33 useAnimation
+
+v1.3.1:
+
+    Making the Code smaller
+    Added animation for the saw part of the Lunar Jackhamsaws
+    Buff The Crusher (Demonite jackhammer) has now 18 Damage
+    If you have Tremor installed the Bone Drill has a crafting recipe
+
+v1.3:
+
+    Added Lunar Jackhamsaws (without Glow effect)
+
+v1.2.2:
+
+    Jackhamshroom is now obtainable from the Truffle
+    remove Jackhamshroom crafting recipe
+
+v1.2.1:
+
+    Update to Terraria 1.3.4.4
+
+v1.2:
+
+    Added The first Jackhamsaws
+
+v1.1.2:
+
+    Update to Terraria 1.3.1.1
+    Bone Drill drop now from Undead Miner
+    remove Bone Drill crafting recipe
+    Drillsaw drop now from Golem (Not working in expert mode)
+    Pwnjackhammer drop now from the Wall of Flesh (Not working in expert mode)
+
+v1.1.1:
+
+    Bug fix
+
+v1.1:
+
+    Added Jackhammers and Change some drill Sprites
+
+v1.0:
+
+    Initial release! (combine Better take a drill with Better take a Chainsaw)
