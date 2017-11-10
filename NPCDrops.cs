@@ -40,26 +40,21 @@ namespace BettertakeaPowerTool
                         {
                             Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, ItemID.Stynger);
                             Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, ItemID.StyngerBolt, Main.rand.Next(60, 100));
-                            NPCLoader.blockLoot.Add(ItemID.Stynger);
-                            NPCLoader.blockLoot.Add(ItemID.StyngerBolt);
                             break;
                         }
                     case 1:
                         {
                             Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, ItemID.PossessedHatchet);
-                            NPCLoader.blockLoot.Add(ItemID.PossessedHatchet);
                             break;
                         }
                     case 2:
                         {
                             Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, ItemID.SunStone);
-                            NPCLoader.blockLoot.Add(ItemID.SunStone);
                             break;
                         }
                     case 3:
                         {
                             Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, ItemID.EyeoftheGolem);
-                            NPCLoader.blockLoot.Add(ItemID.EyeoftheGolem);
                             break;
                         }
                     case 4:
@@ -72,31 +67,36 @@ namespace BettertakeaPowerTool
                             {
                                 Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, ItemID.Picksaw);
                             }
-                            NPCLoader.blockLoot.Add(ItemID.Picksaw);
                             break;
                         }
                     case 5:
                         {
                             Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, ItemID.HeatRay);
-                            NPCLoader.blockLoot.Add(ItemID.HeatRay);
                             break;
                         }
                     case 6:
                         {
                             Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, ItemID.StaffofEarth);
-                            NPCLoader.blockLoot.Add(ItemID.StaffofEarth);
                             break;
                         }
                     case 7:
                         {
                             Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, ItemID.GolemFist);
-                            NPCLoader.blockLoot.Add(ItemID.GolemFist);
                             break;
                         }
                     default:
                         break;
 				}
-			}
+                NPCLoader.blockLoot.Add(ItemID.PossessedHatchet);
+                NPCLoader.blockLoot.Add(ItemID.Stynger);
+                NPCLoader.blockLoot.Add(ItemID.StyngerBolt);
+                NPCLoader.blockLoot.Add(ItemID.GolemFist);
+                NPCLoader.blockLoot.Add(ItemID.StaffofEarth);
+                NPCLoader.blockLoot.Add(ItemID.HeatRay);
+                NPCLoader.blockLoot.Add(ItemID.Picksaw);
+                NPCLoader.blockLoot.Add(ItemID.EyeoftheGolem);
+                NPCLoader.blockLoot.Add(ItemID.SunStone);
+            }
             if (npc.type == NPCID.WallofFlesh && !Main.expertMode) 
 			{//decides what wall flash should drop if not on expert mode.
 				if (Main.rand.Next(2) == 0)
