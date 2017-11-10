@@ -7,7 +7,7 @@ namespace BettertakeaPowerTool
 	class BettertakeaPowerTool : Mod
 	{
 		public BettertakeaPowerTool()
-		{
+		{//sets propeties of the mod
 			Properties = new ModProperties()
             {
                 Autoload = true,
@@ -17,11 +17,11 @@ namespace BettertakeaPowerTool
 		}
 		public override void Load()
 		{
-			var list = new List<short>(Extensions.LunarTools);
+			List<short> list = new List<short>(Extensions.LunarTools);
 			list.ForEach(x =>ItemID.Sets.Deprecated[x] = false);
 		}
 		public override void AddRecipes()
-		{
+		{//adds crafting recepies
 			Extensions.DestroyRecipes();
 			Extensions.MakeSolarRecipes(this);
 			Extensions.MakeNebulaRecipes(this);
@@ -50,38 +50,38 @@ namespace BettertakeaPowerTool
 		}
 		public static void DestroyRecipes()
 		{
-			foreach (var lunarTool in LunarTools)
+			foreach (short lunarTool in LunarTools)
 			{
-				var finder = new RecipeFinder();
+				RecipeFinder finder = new RecipeFinder();
 				finder.SetResult(lunarTool);
-				var recipes = finder.SearchRecipes();
+				List<Terraria.Recipe> recipes = finder.SearchRecipes();
 				recipes.ForEach(x => { var editor = new RecipeEditor(x); editor.DeleteRecipe();});
 			}
 		}
         public static void MakeSolarRecipes(Mod mod)
         {
-            var recipe = new ModRecipe(mod);
+            ModRecipe recipe = new ModRecipe(mod);
             MakeRecipe(recipe, ItemID.FragmentSolar, 12, 10);
             recipe.SetResult(ItemID.SolarFlareDrill);
             recipe.AddRecipe();
         }
 		public static void MakeNebulaRecipes(Mod mod)
 		{
-			var recipe = new ModRecipe(mod);
+			ModRecipe recipe = new ModRecipe(mod);
 			MakeRecipe(recipe, ItemID.FragmentNebula, 12, 10);
 			recipe.SetResult(ItemID.NebulaDrill);
 			recipe.AddRecipe();
 		}
         public static void MakeVortexRecipes(Mod mod)
         {
-            var recipe = new ModRecipe(mod);
+            ModRecipe recipe = new ModRecipe(mod);
             MakeRecipe(recipe, ItemID.FragmentVortex, 12, 10);
             recipe.SetResult(ItemID.VortexDrill);
             recipe.AddRecipe();
         }
 		public static void MakeStardustRecipes(Mod mod)
 		{
-			var recipe = new ModRecipe(mod);
+			ModRecipe recipe = new ModRecipe(mod);
 			MakeRecipe(recipe, ItemID.FragmentStardust, 12, 10);
 			recipe.SetResult(ItemID.StardustDrill);
 			recipe.AddRecipe();
