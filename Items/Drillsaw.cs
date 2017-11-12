@@ -1,18 +1,11 @@
 ﻿using Terraria.ID;
-
 using Terraria.ModLoader;
 using Terraria.Localization;
 
-
-
 namespace BettertakeaPowerTool.Items
-
 {
-
 	public class Drillsaw : ModItem
-
 	{
-
 		public override void SetStaticDefaults()
 		{
 			DisplayName.SetDefault("Drillsaw");
@@ -27,9 +20,7 @@ namespace BettertakeaPowerTool.Items
 			Tooltip.AddTranslation(GameCulture.Polish, "Może kopać jaszczuhrze cegły\n„Nie mylić z Świdrolof“");
 		}
 		public override void SetDefaults()
-
 		{
-
 			item.CloneDefaults(ItemID.Picksaw);
 			item.channel = true;
 			item.noUseGraphic = true;
@@ -39,33 +30,18 @@ namespace BettertakeaPowerTool.Items
 			item.shoot = mod.ProjectileType("Drillsaw");
 			item.shootSpeed = 40f;
 		}
-
-
 		public override void AddRecipes()
-
 		{
-
 			ModRecipe recipe = new ModRecipe(mod);
 			recipe.AddIngredient(ItemID.Picksaw, 1);
-
 			recipe.AddTile(TileID.LihzahrdAltar);
-
 			recipe.SetResult(this);
-
 			recipe.AddRecipe();
-
 			recipe = new ModRecipe(mod);
-
 			recipe.AddIngredient(this);
-
 			recipe.AddTile(TileID.LihzahrdAltar);
-
 			recipe.SetResult(ItemID.Picksaw, 1);
-
 			recipe.AddRecipe();
-
 		}
-
 	}
-
 }

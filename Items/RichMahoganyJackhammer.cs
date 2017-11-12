@@ -1,25 +1,16 @@
 using Terraria.ID;
-
 using Terraria.ModLoader;
 
-
-
 namespace BettertakeaPowerTool.Items
-
 {
-
 	public class RichMahoganyJackhammer : ModItem
-
 	{
-
 		public override void SetStaticDefaults()
 		{
 			DisplayName.SetDefault("Rich Mahogany Jackhammer");
 		}
 		public override void SetDefaults()
-
 		{
-
 			item.CloneDefaults(ItemID.RichMahoganyHammer);
 			item.channel = true;
 			item.noUseGraphic = true;
@@ -29,22 +20,13 @@ namespace BettertakeaPowerTool.Items
 			item.shoot = mod.ProjectileType("RichMahoganyJackhammer");
 			item.shootSpeed = 40f;
 		}
-
-
 		public override void AddRecipes()
-
 		{
-
 			ModRecipe recipe = new ModRecipe(mod);
 			recipe.AddIngredient(ItemID.RichMahogany, 8);
 			recipe.AddTile(TileID.WorkBenches);
-
 			recipe.SetResult(this);
-
 			recipe.AddRecipe();
-
 		}
-
 	}
-
 }

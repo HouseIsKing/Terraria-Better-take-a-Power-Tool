@@ -1,25 +1,16 @@
 using Terraria.ID;
-
 using Terraria.ModLoader;
 
-
-
 namespace BettertakeaPowerTool.Items
-
 {
-
 	public class SolarFlareJackhamsaw : ModItem
-
 	{
-
 		public override void SetStaticDefaults()
 		{
 			DisplayName.SetDefault("Solar Flare Jackhamsaw");
 		}
 		public override void SetDefaults()
-
 		{
-
 			item.CloneDefaults(ItemID.LunarHamaxeSolar);
 			item.channel = true;
 			item.noUseGraphic = true;
@@ -29,23 +20,14 @@ namespace BettertakeaPowerTool.Items
 			item.shoot = mod.ProjectileType("SolarFlareJackhamsaw");
 			item.shootSpeed = 40f;
 		}
-
-
 		public override void AddRecipes()
-
 		{
-
 			ModRecipe recipe = new ModRecipe(mod);
 			recipe.AddIngredient(ItemID.FragmentSolar, 14);
 			recipe.AddIngredient(ItemID.LunarBar, 12);
 			recipe.AddTile(TileID.LunarCraftingStation);
-
 			recipe.SetResult(this);
-
 			recipe.AddRecipe();
-
 		}
-
 	}
-
 }

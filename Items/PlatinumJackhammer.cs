@@ -1,25 +1,16 @@
 using Terraria.ID;
-
 using Terraria.ModLoader;
 
-
-
 namespace BettertakeaPowerTool.Items
-
 {
-
 	public class PlatinumJackhammer : ModItem
-
 	{
-
 		public override void SetStaticDefaults()
 		{
 			DisplayName.SetDefault("Platinum Jackhammer");
 		}
 		public override void SetDefaults()
-
 		{
-
 			item.CloneDefaults(ItemID.PlatinumHammer);
 			item.channel = true;
 			item.noUseGraphic = true;
@@ -29,24 +20,14 @@ namespace BettertakeaPowerTool.Items
 			item.shoot = mod.ProjectileType("PlatinumJackhammer");
 			item.shootSpeed = 40f;
 		}
-
-
 		public override void AddRecipes()
-
 		{
-
 			ModRecipe recipe = new ModRecipe(mod);
 			recipe.AddIngredient(ItemID.PlatinumBar, 10);
-
 			recipe.AddRecipeGroup("Wood", 3);
 			recipe.AddTile(TileID.Anvils);
-
 			recipe.SetResult(this);
-
 			recipe.AddRecipe();
-
 		}
-
 	}
-
 }
