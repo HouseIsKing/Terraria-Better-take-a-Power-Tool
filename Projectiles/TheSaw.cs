@@ -1,11 +1,10 @@
-using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
 namespace BettertakeaPowerTool.Projectiles
 {
-	public class TheSaw : ModProjectile
+    public class TheSaw : ModProjectile
 	{
 		int timer = 0;
 		public override void SetDefaults()

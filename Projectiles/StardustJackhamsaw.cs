@@ -1,11 +1,10 @@
-using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
 namespace BettertakeaPowerTool.Projectiles
 {
-	public class StardustJackhamsaw : ModProjectile
+    public class StardustJackhamsaw : ModProjectile
 	{
 		public override void SetDefaults()
 		{

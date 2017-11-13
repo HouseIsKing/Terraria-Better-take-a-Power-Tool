@@ -11,10 +11,10 @@ namespace BettertakeaPowerTool.Projectiles
 		{
 			projectile.CloneDefaults(ProjectileID.CobaltDrill);
 		}
-      		public override Color? GetAlpha(Color lightColor)
-     		{
+      	public override Color? GetAlpha(Color lightColor)
+    	{
 			return Color.White;
-      		}
+      	}
 		public override void AI()
 		{
 			int dust = Dust.NewDust(projectile.position, projectile.width, projectile.height, 6, projectile.velocity.X * 0.3f, projectile.velocity.Y * 0.3f, 100, default(Color), 1.9f);
