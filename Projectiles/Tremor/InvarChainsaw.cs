@@ -7,10 +7,10 @@ namespace BettertakeaPowerTool.Projectiles.Tremor
 {
 	public class InvarChainsaw : ModProjectile
 	{
-        private static Mod tremor = ModLoader.GetMod("Tremor");
         public override void SetDefaults()
 		{
-			if(tremor != null)
+            Mod tremor = ModLoader.GetMod("Tremor");
+            if (tremor != null)
 			{
 				projectile.CloneDefaults(ProjectileID.CobaltDrill);
 			}

@@ -6,10 +6,10 @@ namespace BettertakeaPowerTool.Projectiles.Tremor
 {
 	public class BronzeJackhamsaw : ModProjectile
 	{
-        private static Mod tremor = ModLoader.GetMod("Tremor");
         public override void SetDefaults()
 		{
-			if(tremor != null)
+            Mod tremor = ModLoader.GetMod("Tremor");
+            if (tremor != null)
 			{
 				projectile.CloneDefaults(ProjectileID.SawtoothShark);
 				Main.projFrames[projectile.type] = 4;
@@ -17,7 +17,8 @@ namespace BettertakeaPowerTool.Projectiles.Tremor
 		}
 		public override void AI()
 		{
-			if(tremor != null)
+            Mod tremor = ModLoader.GetMod("Tremor");
+            if (tremor != null)
 			{
 				projectile.frameCounter++;
 				if (projectile.frameCounter >= 5.4f)
