@@ -1,45 +1,30 @@
+using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace BettertakeaPowerTool.Items.Tremor
+namespace BettertakeaPowerTool.Projectiles.Tremor
 {
-	public class MagmarBreaker : ModItem
+	public class MagmarBreaker : ModProjectile
 	{
         private static Mod tremor = ModLoader.GetMod("Tremor");
-        public override void SetStaticDefaults()
+        public override void SetDefaults()
 		{
 			if(tremor != null)
 			{
-				DisplayName.SetDefault("Magmar Breaker");
+				projectile.CloneDefaults(ProjectileID.SawtoothShark);
+				Main.projFrames[projectile.type] = 4;
 			}
 		}
-		public override void SetDefaults()
+		public override void AI()
 		{
 			if(tremor != null)
 			{
-				item.CloneDefaults(tremor.ItemType("MagmaCrusher"));
-				item.damage = 50;
-				item.useAnimation = 17;
-				item.useTime = 20;
-				item.channel = true;
-				item.noUseGraphic = true;
-				item.noMelee = true;
-				item.knockBack = 5.2f;
-				item.useStyle = 5;
-				item.UseSound = SoundID.Item23;
-				item.shoot = mod.ProjectileType("MagmarBreaker");
-				item.shootSpeed = 40f;
-			}
-		}
-		public override void AddRecipes()
-		{
-			if(tremor != null)
-			{
-				ModRecipe recipe = new ModRecipe(mod);
-				recipe.AddIngredient(tremor.ItemType("MagmoniumBar"), 15);
-				recipe.AddTile(TileID.MythrilAnvil);
-				recipe.SetResult(this);
-				recipe.AddRecipe();
+				projectile.frameCounter++;
+				if (projectile.frameCounter >= 3f)
+				{
+					projectile.frameCounter = 0;
+					projectile.frame = (projectile.frame + 1) % 4;
+				}
 			}
 		}
 	}

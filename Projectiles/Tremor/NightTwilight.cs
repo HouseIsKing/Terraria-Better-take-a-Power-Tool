@@ -1,45 +1,26 @@
+using Microsoft.Xna.Framework;
+using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace BettertakeaPowerTool.Items.Tremor
+namespace BettertakeaPowerTool.Projectiles.Tremor
 {
-	public class NightTwilight : ModItem
+	public class NightTwilight : ModProjectile
 	{
         private static Mod tremor = ModLoader.GetMod("Tremor");
-        public override void SetStaticDefaults()
+        public override void SetDefaults()
 		{
 			if(tremor != null)
 			{
-				DisplayName.SetDefault("Night Twilight");
+				projectile.CloneDefaults(ProjectileID.CobaltDrill);
 			}
 		}
-		public override void SetDefaults()
+		public override void AI()
 		{
 			if(tremor != null)
 			{
-				item.CloneDefaults(tremor.ItemType("NightDusk"));
-				item.channel = true;
-				item.noUseGraphic = true;
-				item.noMelee = true;
-				item.useStyle = 5;
-				item.knockBack = 0;
-				item.UseSound = SoundID.Item23;
-				item.shoot = mod.ProjectileType("NightTwilight");
-				item.shootSpeed = 40f;
-			}
-		}
-		public override void AddRecipes()
-		{
-			if(tremor != null)
-			{
-				ModRecipe recipe = new ModRecipe(mod);
-				recipe.AddIngredient(mod.ItemType("MoltenDrill"));
-				recipe.AddIngredient(mod.ItemType("BoneDrill"));
-				recipe.AddIngredient(mod.ItemType("DrillofBloom"));
-				recipe.AddIngredient(mod.ItemType("NightmareDrill"));
-				recipe.AddTile(TileID.DemonAltar);
-				recipe.SetResult(this);
-				recipe.AddRecipe();
+				int dust = Dust.NewDust(projectile.position, projectile.width, projectile.height, 27, projectile.velocity.X * 0.1f, projectile.velocity.Y * 0.1f, 100, default(Color), 1.5f);
+				Main.dust[dust].noGravity = true;
 			}
 		}
 	}

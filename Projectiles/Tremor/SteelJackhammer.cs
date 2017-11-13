@@ -1,42 +1,30 @@
+using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace BettertakeaPowerTool.Items.Tremor
+namespace BettertakeaPowerTool.Projectiles.Tremor
 {
-	public class SteelJackhammer : ModItem
+	public class SteelJackhammer : ModProjectile
 	{
         private static Mod tremor = ModLoader.GetMod("Tremor");
-        public override void SetStaticDefaults()
+        public override void SetDefaults()
 		{
 			if(tremor != null)
 			{
-				DisplayName.SetDefault("Steel Jackhammer");
+				projectile.CloneDefaults(ProjectileID.CobaltDrill);
+				Main.projFrames[projectile.type] = 4;
 			}
 		}
-		public override void SetDefaults()
+		public override void AI()
 		{
 			if(tremor != null)
 			{
-				item.CloneDefaults(tremor.ItemType("SteelHammer"));
-				item.channel = true;
-				item.noUseGraphic = true;
-				item.noMelee = true;
-				item.useStyle = 5;
-				item.UseSound = SoundID.Item23;
-				item.shoot = mod.ProjectileType("SteelJackhammer");
-				item.shootSpeed = 40f;
-			}
-		}
-		public override void AddRecipes()
-		{
-			if(tremor != null)
-			{
-				ModRecipe recipe = new ModRecipe(mod);
-				recipe.AddIngredient(tremor.ItemType("SteelBar"), 9);
-				recipe.AddRecipeGroup("Wood", 3);
-				recipe.AddTile(TileID.Anvils);
-				recipe.SetResult(this);
-				recipe.AddRecipe();
+				projectile.frameCounter++;
+				if (projectile.frameCounter >= 5.33333333333f)
+				{
+					projectile.frameCounter = 0;
+					projectile.frame = (projectile.frame + 1) % 4;
+				}
 			}
 		}
 	}

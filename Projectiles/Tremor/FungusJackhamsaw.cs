@@ -1,52 +1,30 @@
+using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace BettertakeaPowerTool.Items.Tremor
+namespace BettertakeaPowerTool.Projectiles.Tremor
 {
-	public class FungusJackhamsaw : ModItem
+	public class FungusJackhamsaw : ModProjectile
 	{
         private static Mod tremor = ModLoader.GetMod("Tremor");
-        public override void SetStaticDefaults()
+        public override void SetDefaults()
 		{
 			if(tremor != null)
 			{
-				DisplayName.SetDefault("Fungus Jackhamsaw");
+				projectile.CloneDefaults(ProjectileID.SawtoothShark);
+				Main.projFrames[projectile.type] = 4;
 			}
 		}
-		public override void SetDefaults()
+		public override void AI()
 		{
 			if(tremor != null)
 			{
-				item.CloneDefaults(tremor.ItemType("FungusHamaxe"));
-				item.channel = true;
-				item.noUseGraphic = true;
-				item.noMelee = true;
-				item.useStyle = 5;
-				item.UseSound = SoundID.Item23;
-				item.shoot = mod.ProjectileType("FungusJackhamsaw");
-				item.shootSpeed = 40f;
-			}
-		}
-		public override void AddRecipes()
-		{
-			if(tremor != null)
-			{
-				ModRecipe recipe = new ModRecipe(mod);
-				recipe.AddIngredient(tremor.ItemType("FungusElement"), 11);
-				recipe.AddIngredient(ItemID.GlowingMushroom, 8);
-				recipe.AddIngredient(mod.ItemType("GoldChainsaw"));
-				recipe.AddIngredient(mod.ItemType("GoldJackhammer"));
-				recipe.AddTile(TileID.Anvils);
-				recipe.SetResult(this);
-				recipe.AddRecipe();
-				recipe = new ModRecipe(mod);
-				recipe.AddIngredient(tremor.ItemType("FungusElement"), 11);
-				recipe.AddIngredient(ItemID.GlowingMushroom, 8);
-				recipe.AddIngredient(mod.ItemType("PlatinumChainsaw"));
-				recipe.AddIngredient(mod.ItemType("PlatinumJackhammer"));
-				recipe.AddTile(TileID.Anvils);
-				recipe.SetResult(this);
-		    	recipe.AddRecipe();
+				projectile.frameCounter++;
+				if (projectile.frameCounter >= 5.33333333334f)
+				{
+					projectile.frameCounter = 0;
+					projectile.frame = (projectile.frame + 1) % 4;
+				}
 			}
 		}
 	}
