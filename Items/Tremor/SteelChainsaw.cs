@@ -1,28 +1,23 @@
 using Terraria.ID;
-
 using Terraria.ModLoader;
 
 namespace BettertakeaPowerTool.Items.Tremor
 {
 	public class SteelChainsaw : ModItem
-
 	{
-
-		public override void SetStaticDefaults()
+        private static Mod tremor = ModLoader.GetMod("Tremor");
+        public override void SetStaticDefaults()
 		{
-			Mod tremor = ModLoader.GetMod("Tremor");
 			if(tremor != null)
 			{
 				DisplayName.SetDefault("Steel Chainsaw");
 			}
 		}
 		public override void SetDefaults()
-
 		{
-			Mod tremor = ModLoader.GetMod("Tremor");
 			if(tremor != null)
 			{
-				item.CloneDefaults(ModLoader.GetMod("Tremor").ItemType("SteelAxe"));
+				item.CloneDefaults(tremor.ItemType("SteelAxe"));
 				item.channel = true;
 				item.noUseGraphic = true;
 				item.noMelee = true;
@@ -34,25 +29,17 @@ namespace BettertakeaPowerTool.Items.Tremor
 				item.shootSpeed = 40f;
 			}
 		}
-
 		public override void AddRecipes()
-
 		{
-			Mod tremor = ModLoader.GetMod("Tremor");
 			if(tremor != null)
 			{
 				ModRecipe recipe = new ModRecipe(mod);
-				recipe.AddIngredient(ModLoader.GetMod("Tremor").ItemType("SteelBar"), 11);
+				recipe.AddIngredient(tremor.ItemType("SteelBar"), 11);
 				recipe.AddRecipeGroup("Wood", 3);
 				recipe.AddTile(TileID.Anvils);
-
-				recipe.SetResult(this);
-
+                recipe.SetResult(this);
 				recipe.AddRecipe();
-
 			}
 		}
-
 	}
-
 }

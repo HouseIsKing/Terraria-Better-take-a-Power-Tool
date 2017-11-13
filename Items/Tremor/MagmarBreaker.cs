@@ -1,30 +1,24 @@
 using Terraria.ID;
-
 using Terraria.ModLoader;
 
 namespace BettertakeaPowerTool.Items.Tremor
 {
 	public class MagmarBreaker : ModItem
-
 	{
-
-		public override void SetStaticDefaults()
+        private static Mod tremor = ModLoader.GetMod("Tremor");
+        public override void SetStaticDefaults()
 		{
-			Mod tremor = ModLoader.GetMod("Tremor");
 			if(tremor != null)
 			{
 				DisplayName.SetDefault("Magmar Breaker");
 			}
 		}
 		public override void SetDefaults()
-
 		{
-			Mod tremor = ModLoader.GetMod("Tremor");
 			if(tremor != null)
 			{
-				item.CloneDefaults(ModLoader.GetMod("Tremor").ItemType("MagmaCrusher"));
+				item.CloneDefaults(tremor.ItemType("MagmaCrusher"));
 				item.damage = 50;
-
 				item.useAnimation = 17;
 				item.useTime = 20;
 				item.channel = true;
@@ -37,24 +31,16 @@ namespace BettertakeaPowerTool.Items.Tremor
 				item.shootSpeed = 40f;
 			}
 		}
-
 		public override void AddRecipes()
-
 		{
-			Mod tremor = ModLoader.GetMod("Tremor");
 			if(tremor != null)
 			{
 				ModRecipe recipe = new ModRecipe(mod);
-				recipe.AddIngredient(ModLoader.GetMod("Tremor").ItemType("MagmoniumBar"), 15);
+				recipe.AddIngredient(tremor.ItemType("MagmoniumBar"), 15);
 				recipe.AddTile(TileID.MythrilAnvil);
-
 				recipe.SetResult(this);
-
 				recipe.AddRecipe();
-
 			}
 		}
-
 	}
-
 }

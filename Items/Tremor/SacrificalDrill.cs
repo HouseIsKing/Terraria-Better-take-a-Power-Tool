@@ -1,44 +1,35 @@
 using Terraria.ID;
-
 using Terraria.ModLoader;
 
 namespace BettertakeaPowerTool.Items.Tremor
 {
 	public class SacrificalDrill : ModItem
-
 	{
-
-		public override void SetStaticDefaults()
+        private static Mod tremor = ModLoader.GetMod("Tremor");
+        public override void SetStaticDefaults()
 		{
-			Mod tremor = ModLoader.GetMod("Tremor");
 			if(tremor != null)
 			{
 				DisplayName.SetDefault("Sacrifical Drill");
 			}
 		}
 		public override void SetDefaults()
-
 		{
-			Mod tremor = ModLoader.GetMod("Tremor");
 			if(tremor != null)
 			{
-				item.CloneDefaults(ModLoader.GetMod("Tremor").ItemType("SacrificalPickaxe"));
+				item.CloneDefaults(tremor.ItemType("SacrificalPickaxe"));
 				item.channel = true;
 				item.noUseGraphic = true;
 				item.noMelee = true;
 				item.useStyle = 5;
 				item.knockBack = 0;
-
 				item.UseSound = SoundID.Item23;
 				item.shoot = mod.ProjectileType("SacrificalDrill");
 				item.shootSpeed = 40f;
 			}
 		}
-
 		public override void AddRecipes()
-
 		{
-			Mod tremor = ModLoader.GetMod("Tremor");
 			if(tremor != null)
 			{
 				ModRecipe recipe = new ModRecipe(mod);
@@ -47,14 +38,9 @@ namespace BettertakeaPowerTool.Items.Tremor
 				recipe.AddIngredient(mod.ItemType("DrillofBloom"));
 				recipe.AddIngredient(mod.ItemType("DeathbringerDrill"));
 				recipe.AddTile(TileID.DemonAltar);
-
 				recipe.SetResult(this);
-
 				recipe.AddRecipe();
-
 			}
 		}
-
 	}
-
 }
