@@ -1,19 +1,45 @@
-using Microsoft.Xna.Framework;
-using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace BettertakeaPowerTool.Projectiles.Tremor
+namespace BettertakeaPowerTool.Items.Tremor
 {
-	public class Magsaw : ModProjectile
+	public class Magsaw : ModItem
 	{
-		public override void SetDefaults()
+        private static Mod tremor = ModLoader.GetMod("Tremor");
+        public override void SetStaticDefaults()
 		{
-			Mod tremor = ModLoader.GetMod("Tremor");
 			if(tremor != null)
 			{
-				projectile.CloneDefaults(ProjectileID.ButchersChainsaw);
-				projectile.scale = 1f;
+				DisplayName.SetDefault("Magsaw");
+			}
+		}
+		public override void SetDefaults()
+		{
+			if(tremor != null)
+			{
+				item.CloneDefaults(tremor.ItemType("Magmaxe"));
+				item.damage = 45;
+				item.channel = true;
+				item.noUseGraphic = true;
+				item.noMelee = true;
+				item.useStyle = 5;
+				item.UseSound = SoundID.Item23;
+				item.shoot = mod.ProjectileType("Magsaw");
+				item.shootSpeed = 40f;
+				item.knockBack = 3.6f;
+				item.useTime = 33;
+				item.useAnimation = 27;
+			}
+		}
+		public override void AddRecipes()
+		{
+			if(tremor != null)
+			{
+				ModRecipe recipe = new ModRecipe(mod);
+				recipe.AddIngredient(tremor.ItemType("MagmoniumBar"), 10);
+				recipe.AddTile(TileID.MythrilAnvil);
+				recipe.SetResult(this);
+				recipe.AddRecipe();
 			}
 		}
 	}

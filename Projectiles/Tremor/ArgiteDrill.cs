@@ -1,27 +1,42 @@
-using Microsoft.Xna.Framework;
-using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace BettertakeaPowerTool.Projectiles.Tremor
+namespace BettertakeaPowerTool.Items.Tremor
 {
-	public class ArgiteDrill : ModProjectile
+	public class ArgiteDrill : ModItem
 	{
-		public override void SetDefaults()
+        private static Mod tremor = ModLoader.GetMod("Tremor");
+		public override void SetStaticDefaults()
 		{
-			Mod tremor = ModLoader.GetMod("Tremor");
 			if(tremor != null)
 			{
-				projectile.CloneDefaults(ProjectileID.ChlorophyteDrill);
+				DisplayName.SetDefault("Argite Drill");
 			}
 		}
-		public override void AI()
+		public override void SetDefaults()
 		{
-			Mod tremor = ModLoader.GetMod("Tremor");
 			if(tremor != null)
 			{
-				int dust = Dust.NewDust(projectile.position, projectile.width, projectile.height, 61, projectile.velocity.X * 0.4f, projectile.velocity.Y * 0.4f, 100, default(Color), 1.9f);
-				Main.dust[dust].noGravity = true;
+				item.CloneDefaults(tremor.ItemType("ArgitePickaxe"));
+				item.channel = true;
+				item.noUseGraphic = true;
+				item.noMelee = true;
+				item.useStyle = 5;
+				item.knockBack = 0;
+				item.UseSound = SoundID.Item23;
+				item.shoot = mod.ProjectileType("ArgiteDrill");
+				item.shootSpeed = 40f;
+			}
+		}
+		public override void AddRecipes()
+		{
+			if(tremor != null)
+			{
+				ModRecipe recipe = new ModRecipe(mod);
+				recipe.AddIngredient(tremor.ItemType("ArgiteBar"), 15);
+				recipe.AddTile(TileID.Anvils);
+				recipe.SetResult(this);
+				recipe.AddRecipe();
 			}
 		}
 	}
