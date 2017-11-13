@@ -5,17 +5,18 @@ namespace BettertakeaPowerTool.Items.Tremor
 {
 	public class CoralDrill : ModItem
 	{
-        private static Mod tremor = ModLoader.GetMod("Tremor");
         public override void SetStaticDefaults()
 		{
-			if(tremor != null)
+            Mod tremor = ModLoader.GetMod("Tremor");
+            if (tremor != null)
 			{
 				DisplayName.SetDefault("Coral Drill");
 			}
 		}
 		public override void SetDefaults()
 		{
-			if(tremor != null)
+            Mod tremor = ModLoader.GetMod("Tremor");
+            if (tremor != null)
 			{
 				item.CloneDefaults(tremor.ItemType("CoralPickaxe"));
 				item.channel = true;
@@ -30,7 +31,8 @@ namespace BettertakeaPowerTool.Items.Tremor
 		}
 		public override void AddRecipes()
 		{
-			if(tremor != null)
+            Mod tremor = ModLoader.GetMod("Tremor");
+            if (tremor != null)
 			{
 				ModRecipe recipe = new ModRecipe(mod);
 				recipe.AddIngredient(ItemID.Coral, 9);

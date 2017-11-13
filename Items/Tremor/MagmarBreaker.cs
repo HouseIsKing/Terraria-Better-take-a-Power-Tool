@@ -5,17 +5,18 @@ namespace BettertakeaPowerTool.Items.Tremor
 {
 	public class MagmarBreaker : ModItem
 	{
-        private static Mod tremor = ModLoader.GetMod("Tremor");
         public override void SetStaticDefaults()
 		{
-			if(tremor != null)
+            Mod tremor = ModLoader.GetMod("Tremor");
+            if (tremor != null)
 			{
 				DisplayName.SetDefault("Magmar Breaker");
 			}
 		}
 		public override void SetDefaults()
 		{
-			if(tremor != null)
+            Mod tremor = ModLoader.GetMod("Tremor");
+            if (tremor != null)
 			{
 				item.CloneDefaults(tremor.ItemType("MagmaCrusher"));
 				item.damage = 50;
@@ -33,7 +34,8 @@ namespace BettertakeaPowerTool.Items.Tremor
 		}
 		public override void AddRecipes()
 		{
-			if(tremor != null)
+            Mod tremor = ModLoader.GetMod("Tremor");
+            if (tremor != null)
 			{
 				ModRecipe recipe = new ModRecipe(mod);
 				recipe.AddIngredient(tremor.ItemType("MagmoniumBar"), 15);

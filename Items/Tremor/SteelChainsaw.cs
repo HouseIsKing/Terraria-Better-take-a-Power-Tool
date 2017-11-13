@@ -5,17 +5,18 @@ namespace BettertakeaPowerTool.Items.Tremor
 {
 	public class SteelChainsaw : ModItem
 	{
-        private static Mod tremor = ModLoader.GetMod("Tremor");
         public override void SetStaticDefaults()
 		{
-			if(tremor != null)
+            Mod tremor = ModLoader.GetMod("Tremor");
+            if (tremor != null)
 			{
 				DisplayName.SetDefault("Steel Chainsaw");
 			}
 		}
 		public override void SetDefaults()
 		{
-			if(tremor != null)
+            Mod tremor = ModLoader.GetMod("Tremor");
+            if (tremor != null)
 			{
 				item.CloneDefaults(tremor.ItemType("SteelAxe"));
 				item.channel = true;
@@ -31,7 +32,8 @@ namespace BettertakeaPowerTool.Items.Tremor
 		}
 		public override void AddRecipes()
 		{
-			if(tremor != null)
+            Mod tremor = ModLoader.GetMod("Tremor");
+            if (tremor != null)
 			{
 				ModRecipe recipe = new ModRecipe(mod);
 				recipe.AddIngredient(tremor.ItemType("SteelBar"), 11);
