@@ -1,18 +1,11 @@
 ﻿using Terraria.ID;
-
 using Terraria.ModLoader;
 using Terraria.Localization;
 
-
-
 namespace BettertakeaPowerTool.Items
-
 {
-
 	public class Pwnjackhammer : ModItem
-
 	{
-
 		public override void SetStaticDefaults()
 		{
 			DisplayName.SetDefault("Pwnjackhammer");
@@ -27,9 +20,7 @@ namespace BettertakeaPowerTool.Items
 			Tooltip.AddTranslation(GameCulture.Polish, "Potrafi niszczyć demoniczne ołtarze");
 		}
 		public override void SetDefaults()
-
 		{
-
 			item.CloneDefaults(ItemID.Pwnhammer);
 			item.channel = true;
 			item.noUseGraphic = true;
@@ -39,33 +30,18 @@ namespace BettertakeaPowerTool.Items
 			item.shoot = mod.ProjectileType("Pwnjackhammer");
 			item.shootSpeed = 40f;
 		}
-
-
 		public override void AddRecipes()
-
 		{
-
 			ModRecipe recipe = new ModRecipe(mod);
 			recipe.AddIngredient(ItemID.Pwnhammer, 1);
-
 			recipe.AddTile(TileID.Anvils);
-
 			recipe.SetResult(this);
-
 			recipe.AddRecipe();
-
 			recipe = new ModRecipe(mod);
-
 			recipe.AddIngredient(this);
-
 			recipe.AddTile(TileID.Anvils);
-
 			recipe.SetResult(ItemID.Pwnhammer, 1);
-
 			recipe.AddRecipe();
-
 		}
-
 	}
-
 }

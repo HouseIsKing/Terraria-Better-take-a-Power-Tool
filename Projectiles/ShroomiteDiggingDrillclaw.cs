@@ -1,11 +1,9 @@
-using Microsoft.Xna.Framework;
-using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
 namespace BettertakeaPowerTool.Projectiles
 {
-	public class ShroomiteDiggingDrillclaw : ModProjectile
+    public class ShroomiteDiggingDrillclaw : ModProjectile
 	{
 		public override void SetDefaults()
 		{

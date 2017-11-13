@@ -1,25 +1,16 @@
 using Terraria.ID;
-
 using Terraria.ModLoader;
 
-
-
 namespace BettertakeaPowerTool.Items
-
 {
-
 	public class TheSaw : ModItem
-
 	{
-
 		public override void SetStaticDefaults()
 		{
 			DisplayName.SetDefault("The Saw");
 		}
 		public override void SetDefaults()
-
 		{
-
 			item.CloneDefaults(ItemID.TheAxe);
 			item.channel = true;
 			item.noUseGraphic = true;
@@ -29,30 +20,18 @@ namespace BettertakeaPowerTool.Items
 			item.shoot = mod.ProjectileType("TheSaw");
 			item.shootSpeed = 40f;
 		}
-
-
 		public override void AddRecipes()
-
 		{
-
 			ModRecipe recipe = new ModRecipe(mod);
 			recipe.AddIngredient(ItemID.TheAxe, 1);
 			recipe.AddTile(TileID.MythrilAnvil);
-
 			recipe.SetResult(this);
-
 			recipe.AddRecipe();
-
 			recipe = new ModRecipe(mod);
 			recipe.AddIngredient(this);
 			recipe.AddTile(TileID.MythrilAnvil);
-
 			recipe.SetResult(ItemID.TheAxe, 1);
-
 			recipe.AddRecipe();
-
 		}
-
 	}
-
 }

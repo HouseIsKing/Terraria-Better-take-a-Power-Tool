@@ -12,10 +12,10 @@ namespace BettertakeaPowerTool.Projectiles
 			projectile.CloneDefaults(ProjectileID.SawtoothShark);
 			Main.projFrames[projectile.type] = 4;
 		}
-      		public override Color? GetAlpha(Color lightColor)
-     		{
+    	public override Color? GetAlpha(Color lightColor)
+    	{
 			return Color.White;
-      		}
+    	}
 		public override void AI()
 		{
 			projectile.frameCounter++;

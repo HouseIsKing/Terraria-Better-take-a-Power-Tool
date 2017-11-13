@@ -1,18 +1,11 @@
 ﻿using Terraria.ID;
-
 using Terraria.ModLoader;
 using Terraria.Localization;
 
-
-
 namespace BettertakeaPowerTool.Items
-
-{
-
+{ 
 	public class Jackhamshroom : ModItem
-
 	{
-
 		public override void SetStaticDefaults()
 		{
 			DisplayName.SetDefault("Jackhamshroom");
@@ -27,9 +20,7 @@ namespace BettertakeaPowerTool.Items
 			Tooltip.AddTranslation(GameCulture.Polish, "Potrafi niszczyć demoniczne ołtarze");
 		}
 		public override void SetDefaults()
-
 		{
-
 			item.CloneDefaults(ItemID.Hammush);
 			item.channel = true;
 			item.noUseGraphic = true;
@@ -39,8 +30,5 @@ namespace BettertakeaPowerTool.Items
 			item.shoot = mod.ProjectileType("Jackhamshroom");
 			item.shootSpeed = 40f;
 		}
-
-
 	}
-
 }

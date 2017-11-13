@@ -1,4 +1,3 @@
-using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
@@ -7,9 +6,9 @@ namespace BettertakeaPowerTool.Projectiles.Tremor
 {
 	public class BronzeJackhamsaw : ModProjectile
 	{
-		public override void SetDefaults()
+        private static Mod tremor = ModLoader.GetMod("Tremor");
+        public override void SetDefaults()
 		{
-			Mod tremor = ModLoader.GetMod("Tremor");
 			if(tremor != null)
 			{
 				projectile.CloneDefaults(ProjectileID.SawtoothShark);
@@ -18,7 +17,6 @@ namespace BettertakeaPowerTool.Projectiles.Tremor
 		}
 		public override void AI()
 		{
-			Mod tremor = ModLoader.GetMod("Tremor");
 			if(tremor != null)
 			{
 				projectile.frameCounter++;
