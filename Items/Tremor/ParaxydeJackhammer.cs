@@ -19,7 +19,6 @@ namespace BettertakeaPowerTool.Items.Tremor
             if (tremor != null)
             {
                 item.CloneDefaults(tremor.ItemType("ParaxydeHammer"));
-                item.damage = 19;
                 item.channel = true;
                 item.noUseGraphic = true;
                 item.noMelee = true;
@@ -27,9 +26,6 @@ namespace BettertakeaPowerTool.Items.Tremor
                 item.UseSound = SoundID.Item23;
                 item.shoot = mod.ProjectileType("ParaxydeJackhammer");
                 item.shootSpeed = 40f;
-                item.knockBack = 2.8f;
-                item.useTime = 9;
-                item.useAnimation = 6;
             }
         }
         public override void AddRecipes()
