@@ -1,6 +1,6 @@
 author = dennisw100, HMD-ShiningBlack, Farkylk | Silvan
 
-version = 1.4.4
+version = 1.4.4.1
 displayName = Better take a Power Tool
 hideCode = false
 hideResources = false
