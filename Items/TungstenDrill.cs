@@ -1,17 +1,10 @@
 ﻿using Terraria.ID;
-
-using Terraria.ModLoader;
-using Terraria.Localization;
-
+using Terraria.ModLoader;using Terraria.Localization;
 
 namespace BettertakeaPowerTool.Items
-
 {
-
 	public class TungstenDrill : ModItem
-
 	{
-
 		public override void SetStaticDefaults()
 		{
 			DisplayName.SetDefault("Tungsten Drill");
@@ -26,38 +19,25 @@ namespace BettertakeaPowerTool.Items
 			Tooltip.AddTranslation(GameCulture.Polish, "Może wydobywać meteoryt");
 		}
 		public override void SetDefaults()
-
 		{
-
 			item.CloneDefaults(ItemID.TungstenPickaxe);
 			item.channel = true;
 			item.noUseGraphic = true;
 			item.noMelee = true;
 			item.useStyle = 5;
 			item.knockBack = 0;
-
 			item.UseSound = SoundID.Item23;
 			item.shoot = mod.ProjectileType("TungstenDrill");
 			item.shootSpeed = 40f;
 		}
-
-
 		public override void AddRecipes()
-
 		{
-
 			ModRecipe recipe = new ModRecipe(mod);
 			recipe.AddIngredient(ItemID.TungstenBar, 12);
-
 			recipe.AddRecipeGroup("Wood", 4);
 			recipe.AddTile(TileID.Anvils);
-
 			recipe.SetResult(this);
-
 			recipe.AddRecipe();
-
 		}
-
 	}
-
 }
