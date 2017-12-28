@@ -1,0 +1,366 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{8298EAB6-0586-4BDA-9483-83624B66B13A}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>BettertakeaPowerTool</RootNamespace>
+    <AssemblyName>BettertakeaPowerTool</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="BettertakeaPowerTool.cs" />
+    <Compile Include="Items\BloodyMassacre.cs" />
+    <Compile Include="Items\BoneDrill.cs" />
+    <Compile Include="Items\BorealWoodJackhammer.cs" />
+    <Compile Include="Items\CactusDrill.cs" />
+    <Compile Include="Items\CandyCaneDrill.cs" />
+    <Compile Include="Items\CopperChainsaw.cs" />
+    <Compile Include="Items\CopperDrill.cs" />
+    <Compile Include="Items\CopperJackhammer.cs" />
+    <Compile Include="Items\DeathbringerDrill.cs" />
+    <Compile Include="Items\Drillsaw.cs" />
+    <Compile Include="Items\DrilltoothShark.cs" />
+    <Compile Include="Items\EbonwoodJackhammer.cs" />
+    <Compile Include="Items\FleshSmasher.cs" />
+    <Compile Include="Items\GoldChainsaw.cs" />
+    <Compile Include="Items\GoldDrill.cs" />
+    <Compile Include="Items\GoldJackhammer.cs" />
+    <Compile Include="Items\IronChainsaw.cs" />
+    <Compile Include="Items\IronDrill.cs" />
+    <Compile Include="Items\IronJackhammer.cs" />
+    <Compile Include="Items\Jackhamshroom.cs" />
+    <Compile Include="Items\LeadChainsaw.cs" />
+    <Compile Include="Items\LeadDrill.cs" />
+    <Compile Include="Items\LeadJackhammer.cs" />
+    <Compile Include="Items\MeteorJackhamsaw.cs" />
+    <Compile Include="Items\MoltenDrill.cs" />
+    <Compile Include="Items\MoltenJackhamsaw.cs" />
+    <Compile Include="Items\NebulaJackhamsaw.cs" />
+    <Compile Include="Items\NightmareDrill.cs" />
+    <Compile Include="Items\PalmWoodJackhammer.cs" />
+    <Compile Include="Items\PearlwoodJackhammer.cs" />
+    <Compile Include="Items\PlatinumChainsaw.cs" />
+    <Compile Include="Items\PlatinumDrill.cs" />
+    <Compile Include="Items\PlatinumJackhammer.cs" />
+    <Compile Include="Items\Pwnjackhammer.cs" />
+    <Compile Include="Items\RichMahoganyJackhammer.cs" />
+    <Compile Include="Items\ShadewoodJackhammer.cs" />
+    <Compile Include="Items\ShroomiteDiggingDrillclaw.cs" />
+    <Compile Include="Items\SilverChainsaw.cs" />
+    <Compile Include="Items\SilverDrill.cs" />
+    <Compile Include="Items\SilverJackhammer.cs" />
+    <Compile Include="Items\Smashfish.cs" />
+    <Compile Include="Items\SolarFlareJackhamsaw.cs" />
+    <Compile Include="Items\SpectreDrill.cs" />
+    <Compile Include="Items\SpectreJackhamsaw.cs" />
+    <Compile Include="Items\StardustJackhamsaw.cs" />
+    <Compile Include="Items\TheCrusher.cs" />
+    <Compile Include="Items\TheSaw.cs" />
+    <Compile Include="Items\TinChainsaw.cs" />
+    <Compile Include="Items\TinDrill.cs" />
+    <Compile Include="Items\TinJackhammer.cs" />
+    <Compile Include="Items\Tremor\ArgiteDrill.cs" />
+    <Compile Include="Items\Tremor\BronzeDrill.cs" />
+    <Compile Include="Items\Tremor\BronzeJackhamsaw.cs" />
+    <Compile Include="Items\Tremor\CoralDrill.cs" />
+    <Compile Include="Items\Tremor\DrillofBloom.cs" />
+    <Compile Include="Items\Tremor\FungusDrill.cs" />
+    <Compile Include="Items\Tremor\FungusJackhamsaw.cs" />
+    <Compile Include="Items\Tremor\InvarChainsaw.cs" />
+    <Compile Include="Items\Tremor\InvarDrill.cs" />
+    <Compile Include="Items\Tremor\InvarJackhammer.cs" />
+    <Compile Include="Items\Tremor\MagmarBreaker.cs" />
+    <Compile Include="Items\Tremor\Magrill.cs" />
+    <Compile Include="Items\Tremor\Magsaw.cs" />
+    <Compile Include="Items\Tremor\NightTwilight.cs" />
+    <Compile Include="Items\Tremor\SacrificalDrill.cs" />
+    <Compile Include="Items\Tremor\SteelChainsaw.cs" />
+    <Compile Include="Items\Tremor\SteelDrill.cs" />
+    <Compile Include="Items\Tremor\SteelJackhammer.cs" />
+    <Compile Include="Items\TungstenChainsaw.cs" />
+    <Compile Include="Items\TungstenDrill.cs" />
+    <Compile Include="Items\TungstenJackhammer.cs" />
+    <Compile Include="Items\VortexJackhamsaw.cs" />
+    <Compile Include="Items\WarChainsawoftheNight.cs" />
+    <Compile Include="Items\WoodenJackhammer.cs" />
+    <Compile Include="NPCDrops.cs" />
+    <Compile Include="Projectiles\BloodyMassacre.cs" />
+    <Compile Include="Projectiles\BoneDrill.cs" />
+    <Compile Include="Projectiles\BorealWoodJackhammer.cs" />
+    <Compile Include="Projectiles\CactusDrill.cs" />
+    <Compile Include="Projectiles\CandyCaneDrill.cs" />
+    <Compile Include="Projectiles\CopperChainsaw.cs" />
+    <Compile Include="Projectiles\CopperDrill.cs" />
+    <Compile Include="Projectiles\CopperJackhammer.cs" />
+    <Compile Include="Projectiles\DeathbringerDrill.cs" />
+    <Compile Include="Projectiles\Drillsaw.cs" />
+    <Compile Include="Projectiles\DrilltoothShark.cs" />
+    <Compile Include="Projectiles\EbonwoodJackhammer.cs" />
+    <Compile Include="Projectiles\FleshSmasher.cs" />
+    <Compile Include="Projectiles\GoldChainsaw.cs" />
+    <Compile Include="Projectiles\GoldDrill.cs" />
+    <Compile Include="Projectiles\GoldJackhammer.cs" />
+    <Compile Include="Projectiles\IronChainsaw.cs" />
+    <Compile Include="Projectiles\IronDrill.cs" />
+    <Compile Include="Projectiles\IronJackhammer.cs" />
+    <Compile Include="Projectiles\Jackhamshroom.cs" />
+    <Compile Include="Projectiles\LeadChainsaw.cs" />
+    <Compile Include="Projectiles\LeadDrill.cs" />
+    <Compile Include="Projectiles\LeadJackhammer.cs" />
+    <Compile Include="Projectiles\MeteorJackhamsaw.cs" />
+    <Compile Include="Projectiles\MoltenDrill.cs" />
+    <Compile Include="Projectiles\MoltenJackhamsaw.cs" />
+    <Compile Include="Projectiles\NebulaJackhamsaw.cs" />
+    <Compile Include="Projectiles\NightmareDrill.cs" />
+    <Compile Include="Projectiles\PalmWoodJackhammer.cs" />
+    <Compile Include="Projectiles\PearlwoodJackhammer.cs" />
+    <Compile Include="Projectiles\PlatinumChainsaw.cs" />
+    <Compile Include="Projectiles\PlatinumDrill.cs" />
+    <Compile Include="Projectiles\PlatinumJackhammer.cs" />
+    <Compile Include="Projectiles\Pwnjackhammer.cs" />
+    <Compile Include="Projectiles\RichMahoganyJackhammer.cs" />
+    <Compile Include="Projectiles\ShadewoodJackhammer.cs" />
+    <Compile Include="Projectiles\ShroomiteDiggingDrillclaw.cs" />
+    <Compile Include="Projectiles\SilverChainsaw.cs" />
+    <Compile Include="Projectiles\SilverDrill.cs" />
+    <Compile Include="Projectiles\SilverJackhammer.cs" />
+    <Compile Include="Projectiles\Smashfish.cs" />
+    <Compile Include="Projectiles\SolarFlareJackhamsaw.cs" />
+    <Compile Include="Projectiles\SpectreDrill.cs" />
+    <Compile Include="Projectiles\SpectreJackhamsaw.cs" />
+    <Compile Include="Projectiles\StardustJackhamsaw.cs" />
+    <Compile Include="Projectiles\TheCrusher.cs" />
+    <Compile Include="Projectiles\TheSaw.cs" />
+    <Compile Include="Projectiles\TinChainsaw.cs" />
+    <Compile Include="Projectiles\TinDrill.cs" />
+    <Compile Include="Projectiles\TinJackhammer.cs" />
+    <Compile Include="Projectiles\Tremor\ArgiteDrill.cs" />
+    <Compile Include="Projectiles\Tremor\BronzeDrill.cs" />
+    <Compile Include="Projectiles\Tremor\BronzeJackhamsaw.cs" />
+    <Compile Include="Projectiles\Tremor\CoralDrill.cs" />
+    <Compile Include="Projectiles\Tremor\DrillofBloom.cs" />
+    <Compile Include="Projectiles\Tremor\FungusDrill.cs" />
+    <Compile Include="Projectiles\Tremor\FungusJackhamsaw.cs" />
+    <Compile Include="Projectiles\Tremor\InvarChainsaw.cs" />
+    <Compile Include="Projectiles\Tremor\InvarDrill.cs" />
+    <Compile Include="Projectiles\Tremor\InvarJackhammer.cs" />
+    <Compile Include="Projectiles\Tremor\MagmarBreaker.cs" />
+    <Compile Include="Projectiles\Tremor\Magrill.cs" />
+    <Compile Include="Projectiles\Tremor\Magsaw.cs" />
+    <Compile Include="Projectiles\Tremor\NightTwilight.cs" />
+    <Compile Include="Projectiles\Tremor\SacrificalDrill.cs" />
+    <Compile Include="Projectiles\Tremor\SteelChainsaw.cs" />
+    <Compile Include="Projectiles\Tremor\SteelDrill.cs" />
+    <Compile Include="Projectiles\Tremor\SteelJackhammer.cs" />
+    <Compile Include="Projectiles\TungstenChainsaw.cs" />
+    <Compile Include="Projectiles\TungstenDrill.cs" />
+    <Compile Include="Projectiles\TungstenJackhammer.cs" />
+    <Compile Include="Projectiles\VortexJackhamsaw.cs" />
+    <Compile Include="Projectiles\WarChainsawoftheNight.cs" />
+    <Compile Include="Projectiles\WoodenJackhammer.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Xna.Framework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=842cf8be1de50553, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Windows\Microsoft.NET\assembly\GAC_32\Microsoft.Xna.Framework\v4.0_4.0.0.0__842cf8be1de50553\Microsoft.Xna.Framework.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Xna.Framework.Game, Version=4.0.0.0, Culture=neutral, PublicKeyToken=842cf8be1de50553, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Windows\Microsoft.NET\assembly\GAC_32\Microsoft.Xna.Framework.Game\v4.0_4.0.0.0__842cf8be1de50553\Microsoft.Xna.Framework.Game.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Xna.Framework.Graphics, Version=4.0.0.0, Culture=neutral, PublicKeyToken=842cf8be1de50553, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Windows\Microsoft.NET\assembly\GAC_32\Microsoft.Xna.Framework.Graphics\v4.0_4.0.0.0__842cf8be1de50553\Microsoft.Xna.Framework.Graphics.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Xna.Framework.Xact, Version=4.0.0.0, Culture=neutral, PublicKeyToken=842cf8be1de50553, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Windows\Microsoft.NET\assembly\GAC_32\Microsoft.Xna.Framework.Xact\v4.0_4.0.0.0__842cf8be1de50553\Microsoft.Xna.Framework.Xact.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="Terraria">
+      <HintPath>..\..\SteamLibrary\steamapps\common\Terraria\Terraria.exe</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Items\BloodyMassacre.png" />
+    <Content Include="Items\BoneDrill.png" />
+    <Content Include="Items\BorealWoodJackhammer.png" />
+    <Content Include="Items\CactusDrill.png" />
+    <Content Include="Items\CandyCaneDrill.png" />
+    <Content Include="Items\CopperChainsaw.png" />
+    <Content Include="Items\CopperDrill.png" />
+    <Content Include="Items\CopperJackhammer.png" />
+    <Content Include="Items\DeathbringerDrill.png" />
+    <Content Include="Items\Drillsaw.png" />
+    <Content Include="Items\DrilltoothShark.png" />
+    <Content Include="Items\EbonwoodJackhammer.png" />
+    <Content Include="Items\FleshSmasher.png" />
+    <Content Include="Items\GoldChainsaw.png" />
+    <Content Include="Items\GoldDrill.png" />
+    <Content Include="Items\GoldJackhammer.png" />
+    <Content Include="Items\IronChainsaw.png" />
+    <Content Include="Items\IronDrill.png" />
+    <Content Include="Items\IronJackhammer.png" />
+    <Content Include="Items\Jackhamshroom.png" />
+    <Content Include="Items\LeadChainsaw.png" />
+    <Content Include="Items\LeadDrill.png" />
+    <Content Include="Items\LeadJackhammer.png" />
+    <Content Include="Items\MeteorJackhamsaw.png" />
+    <Content Include="Items\MoltenDrill.png" />
+    <Content Include="Items\MoltenJackhamsaw.png" />
+    <Content Include="Items\NebulaJackhamsaw.png" />
+    <Content Include="Items\NightmareDrill.png" />
+    <Content Include="Items\PalmWoodJackhammer.png" />
+    <Content Include="Items\PearlwoodJackhammer.png" />
+    <Content Include="Items\PlatinumChainsaw.png" />
+    <Content Include="Items\PlatinumDrill.png" />
+    <Content Include="Items\PlatinumJackhammer.png" />
+    <Content Include="Items\Pwnjackhammer.png" />
+    <Content Include="Items\RichMahoganyJackhammer.png" />
+    <Content Include="Items\ShadewoodJackhammer.png" />
+    <Content Include="Items\ShroomiteDiggingDrillclaw.png" />
+    <Content Include="Items\SilverChainsaw.png" />
+    <Content Include="Items\SilverDrill.png" />
+    <Content Include="Items\SilverJackhammer.png" />
+    <Content Include="Items\Smashfish.png" />
+    <Content Include="Items\SolarFlareJackhamsaw.png" />
+    <Content Include="Items\SpectreDrill.png" />
+    <Content Include="Items\SpectreJackhamsaw.png" />
+    <Content Include="Items\StardustJackhamsaw.png" />
+    <Content Include="Items\TheCrusher.png" />
+    <Content Include="Items\TheSaw.png" />
+    <Content Include="Items\TinChainsaw.png" />
+    <Content Include="Items\TinDrill.png" />
+    <Content Include="Items\TinJackhammer.png" />
+    <Content Include="Items\Tremor\AdamantiteJackhammer.png" />
+    <Content Include="Items\Tremor\ArgiteDrill.png" />
+    <Content Include="Items\Tremor\BronzeDrill.png" />
+    <Content Include="Items\Tremor\BronzeJackhamsaw.png" />
+    <Content Include="Items\Tremor\CobaltJackhammer.png" />
+    <Content Include="Items\Tremor\CoralDrill.png" />
+    <Content Include="Items\Tremor\DrillofBloom.png" />
+    <Content Include="Items\Tremor\FungusDrill.png" />
+    <Content Include="Items\Tremor\FungusJackhamsaw.png" />
+    <Content Include="Items\Tremor\InvarChainsaw.png" />
+    <Content Include="Items\Tremor\InvarDrill.png" />
+    <Content Include="Items\Tremor\InvarJackhammer.png" />
+    <Content Include="Items\Tremor\MagmarBreaker.png" />
+    <Content Include="Items\Tremor\Magrill.png" />
+    <Content Include="Items\Tremor\Magsaw.png" />
+    <Content Include="Items\Tremor\MythrilJackhammer.png" />
+    <Content Include="Items\Tremor\NightTwilight.png" />
+    <Content Include="Items\Tremor\OrichalcumJackhammer.png" />
+    <Content Include="Items\Tremor\PalladiumJackhammer.png" />
+    <Content Include="Items\Tremor\SacrificalDrill.png" />
+    <Content Include="Items\Tremor\SteelChainsaw.png" />
+    <Content Include="Items\Tremor\SteelDrill.png" />
+    <Content Include="Items\Tremor\SteelJackhammer.png" />
+    <Content Include="Items\Tremor\TitaniumJackhammer.png" />
+    <Content Include="Items\TungstenChainsaw.png" />
+    <Content Include="Items\TungstenDrill.png" />
+    <Content Include="Items\TungstenJackhammer.png" />
+    <Content Include="Items\VortexJackhamsaw.png" />
+    <Content Include="Items\WarChainsawoftheNight.png" />
+    <Content Include="Items\WoodenJackhammer.png" />
+    <Content Include="Projectiles\BloodyMassacre.png" />
+    <Content Include="Projectiles\BoneDrill.png" />
+    <Content Include="Projectiles\BorealWoodJackhammer.png" />
+    <Content Include="Projectiles\CactusDrill.png" />
+    <Content Include="Projectiles\CandyCaneDrill.png" />
+    <Content Include="Projectiles\CopperChainsaw.png" />
+    <Content Include="Projectiles\CopperDrill.png" />
+    <Content Include="Projectiles\CopperJackhammer.png" />
+    <Content Include="Projectiles\DeathbringerDrill.png" />
+    <Content Include="Projectiles\Drillsaw.png" />
+    <Content Include="Projectiles\DrilltoothShark.png" />
+    <Content Include="Projectiles\EbonwoodJackhammer.png" />
+    <Content Include="Projectiles\FleshSmasher.png" />
+    <Content Include="Projectiles\GoldChainsaw.png" />
+    <Content Include="Projectiles\GoldDrill.png" />
+    <Content Include="Projectiles\GoldJackhammer.png" />
+    <Content Include="Projectiles\IronChainsaw.png" />
+    <Content Include="Projectiles\IronDrill.png" />
+    <Content Include="Projectiles\IronJackhammer.png" />
+    <Content Include="Projectiles\Jackhamshroom.png" />
+    <Content Include="Projectiles\LeadChainsaw.png" />
+    <Content Include="Projectiles\LeadDrill.png" />
+    <Content Include="Projectiles\LeadJackhammer.png" />
+    <Content Include="Projectiles\MeteorJackhamsaw.png" />
+    <Content Include="Projectiles\MoltenDrill.png" />
+    <Content Include="Projectiles\MoltenJackhamsaw.png" />
+    <Content Include="Projectiles\NebulaJackhamsaw.png" />
+    <Content Include="Projectiles\NightmareDrill.png" />
+    <Content Include="Projectiles\PalmWoodJackhammer.png" />
+    <Content Include="Projectiles\PearlwoodJackhammer.png" />
+    <Content Include="Projectiles\PlatinumChainsaw.png" />
+    <Content Include="Projectiles\PlatinumDrill.png" />
+    <Content Include="Projectiles\PlatinumJackhammer.png" />
+    <Content Include="Projectiles\Pwnjackhammer.png" />
+    <Content Include="Projectiles\RichMahoganyJackhammer.png" />
+    <Content Include="Projectiles\ShadewoodJackhammer.png" />
+    <Content Include="Projectiles\ShroomiteDiggingDrillclaw.png" />
+    <Content Include="Projectiles\SilverChainsaw.png" />
+    <Content Include="Projectiles\SilverDrill.png" />
+    <Content Include="Projectiles\SilverJackhammer.png" />
+    <Content Include="Projectiles\Smashfish.png" />
+    <Content Include="Projectiles\SolarFlareJackhamsaw.png" />
+    <Content Include="Projectiles\SpectreDrill.png" />
+    <Content Include="Projectiles\SpectreJackhamsaw.png" />
+    <Content Include="Projectiles\StardustJackhamsaw.png" />
+    <Content Include="Projectiles\TheCrusher.png" />
+    <Content Include="Projectiles\TheSaw.png" />
+    <Content Include="Projectiles\TinChainsaw.png" />
+    <Content Include="Projectiles\TinDrill.png" />
+    <Content Include="Projectiles\TinJackhammer.png" />
+    <Content Include="Projectiles\Tremor\ArgiteDrill.png" />
+    <Content Include="Projectiles\Tremor\BronzeDrill.png" />
+    <Content Include="Projectiles\Tremor\BronzeJackhamsaw.png" />
+    <Content Include="Projectiles\Tremor\CoralDrill.png" />
+    <Content Include="Projectiles\Tremor\DrillofBloom.png" />
+    <Content Include="Projectiles\Tremor\FungusDrill.png" />
+    <Content Include="Projectiles\Tremor\FungusJackhamsaw.png" />
+    <Content Include="Projectiles\Tremor\InvarChainsaw.png" />
+    <Content Include="Projectiles\Tremor\InvarDrill.png" />
+    <Content Include="Projectiles\Tremor\InvarJackhammer.png" />
+    <Content Include="Projectiles\Tremor\MagmarBreaker.png" />
+    <Content Include="Projectiles\Tremor\Magrill.png" />
+    <Content Include="Projectiles\Tremor\Magsaw.png" />
+    <Content Include="Projectiles\Tremor\NightTwilight.png" />
+    <Content Include="Projectiles\Tremor\SacrificalDrill.png" />
+    <Content Include="Projectiles\Tremor\SteelChainsaw.png" />
+    <Content Include="Projectiles\Tremor\SteelDrill.png" />
+    <Content Include="Projectiles\Tremor\SteelJackhammer.png" />
+    <Content Include="Projectiles\TungstenChainsaw.png" />
+    <Content Include="Projectiles\TungstenDrill.png" />
+    <Content Include="Projectiles\TungstenJackhammer.png" />
+    <Content Include="Projectiles\VortexJackhamsaw.png" />
+    <Content Include="Projectiles\WarChainsawoftheNight.png" />
+    <Content Include="Projectiles\WoodenJackhammer.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
