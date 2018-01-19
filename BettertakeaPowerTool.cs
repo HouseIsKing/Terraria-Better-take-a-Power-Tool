@@ -6,6 +6,8 @@ namespace BettertakeaPowerTool
 {
 	class BettertakeaPowerTool : Mod
 	{
+		public static string GithubUserName { get { return "dennisw100"; } }
+		public static string GithubProjectName { get { return "Terraria-Better-take-a-Power-Tool"; } }
 		public BettertakeaPowerTool()
 		{//sets propeties of the mod
 			Properties = new ModProperties()
