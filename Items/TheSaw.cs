@@ -20,18 +20,5 @@ namespace BettertakeaPowerTool.Items
 			item.shoot = mod.ProjectileType("TheSaw");
 			item.shootSpeed = 40f;
 		}
-		public override void AddRecipes()
-		{
-			ModRecipe recipe = new ModRecipe(mod);
-			recipe.AddIngredient(ItemID.TheAxe, 1);
-			recipe.AddTile(TileID.MythrilAnvil);
-			recipe.SetResult(this);
-			recipe.AddRecipe();
-			recipe = new ModRecipe(mod);
-			recipe.AddIngredient(this);
-			recipe.AddTile(TileID.MythrilAnvil);
-			recipe.SetResult(ItemID.TheAxe, 1);
-			recipe.AddRecipe();
-		}
 	}
 }
