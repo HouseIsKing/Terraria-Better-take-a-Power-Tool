@@ -30,18 +30,5 @@ namespace BettertakeaPowerTool.Items
 			item.shoot = mod.ProjectileType("Pwnjackhammer");
 			item.shootSpeed = 40f;
 		}
-		public override void AddRecipes()
-		{
-			ModRecipe recipe = new ModRecipe(mod);
-			recipe.AddIngredient(ItemID.Pwnhammer, 1);
-			recipe.AddTile(TileID.Anvils);
-			recipe.SetResult(this);
-			recipe.AddRecipe();
-			recipe = new ModRecipe(mod);
-			recipe.AddIngredient(this);
-			recipe.AddTile(TileID.Anvils);
-			recipe.SetResult(ItemID.Pwnhammer, 1);
-			recipe.AddRecipe();
-		}
 	}
 }

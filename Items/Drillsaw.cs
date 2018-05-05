@@ -30,18 +30,5 @@ namespace BettertakeaPowerTool.Items
 			item.shoot = mod.ProjectileType("Drillsaw");
 			item.shootSpeed = 40f;
 		}
-		public override void AddRecipes()
-		{
-			ModRecipe recipe = new ModRecipe(mod);
-			recipe.AddIngredient(ItemID.Picksaw, 1);
-			recipe.AddTile(TileID.LihzahrdAltar);
-			recipe.SetResult(this);
-			recipe.AddRecipe();
-			recipe = new ModRecipe(mod);
-			recipe.AddIngredient(this);
-			recipe.AddTile(TileID.LihzahrdAltar);
-			recipe.SetResult(ItemID.Picksaw, 1);
-			recipe.AddRecipe();
-		}
 	}
 }

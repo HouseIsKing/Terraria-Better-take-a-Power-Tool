@@ -29,22 +29,5 @@ namespace BettertakeaPowerTool.Items.Tremor
 				item.shootSpeed = 40f;
 			}
 		}
-		public override void AddRecipes()
-		{
-            Mod tremor = ModLoader.GetMod("Tremor");
-            if (tremor != null)
-			{
-				ModRecipe recipe = new ModRecipe(mod);
-				recipe.AddIngredient(tremor.ItemType("PickaxeofBloom"));
-				recipe.AddTile(TileID.DemonAltar);
-				recipe.SetResult(this);
-				recipe.AddRecipe();
-				recipe = new ModRecipe(mod);
-				recipe.AddIngredient(this);
-				recipe.AddTile(TileID.DemonAltar);
-				recipe.SetResult(tremor.ItemType("PickaxeofBloom"));
-				recipe.AddRecipe();
-			}
-		}
 	}
 }
