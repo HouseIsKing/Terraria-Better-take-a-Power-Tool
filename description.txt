@@ -1,5 +1,9 @@
 Better take a Power Tool adds new drills/chainsaws/jackhammers/jackhamsaws based on all pickaxes/axes/hammers/hamaxes that do not have a drill/chainsaw/jackhammer/jackhamsaw counterpart in Terraria.
 
+v1.4.4.3:
+
+	Removed recipe of Drillsaw, Pwnjackhammer, Drill of Bloom & The Saw because they now drop also in expert mode
+
 v1.4.4.2:
 
 	Support for Hamstar's Helpers
