@@ -13,7 +13,13 @@ namespace BettertakeaPowerTool
 				shop.item[nextSlot].SetDefaults(mod.ItemType("Jackhamshroom"));
 				nextSlot++;
 			}
-		}
+            Mod tremor = ModLoader.GetMod("Tremor");
+            if (tremor != null && type == tremor.NPCType("Chef"))
+            {
+                    shop.item[nextSlot].SetDefaults(mod.ItemType("PizzaCutter"));
+                    nextSlot++;
+            }
+        }
 		public override bool PreNPCLoot(NPC npc)
 		{
 			if (npc.type == NPCID.UndeadMiner)
