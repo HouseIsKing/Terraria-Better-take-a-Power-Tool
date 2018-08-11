@@ -1,0 +1,45 @@
+﻿using System;
+using System.Collections.Generic;
+using System.IO;
+using System.Linq;
+using Microsoft.Xna.Framework;
+using Terraria;
+using Terraria.GameContent.Generation;
+using Terraria.ID;
+using Terraria.ModLoader;
+using Terraria.ModLoader.IO;
+using Terraria.World.Generation;
+
+namespace BettertakeaPowerTool
+{
+    public class ChestDrops : ModWorld
+    {
+        public override void PostWorldGen()
+        {
+            Mod tremor = ModLoader.GetMod("Tremor");
+            if (tremor != null)
+            {
+                int[] itemsToPlaceInIceChests = new int[] { mod.ItemType("FrozenDrillAxe"), ModLoader.GetMod("Tremor").ItemType("FrozenPaxe") };
+                int itemsToPlaceInIceChestsChoice = 0;
+                foreach (Chest chest in Main.chest.Where(c => c != null))
+                {
+                    var tile = Main.tile[chest.x, chest.y];
+                    //   If you look at the sprite for Chests by extracting Tiles_21.xnb, you'll see that the 12th chest is the Ice Chest. Since we are counting from 0, this is where 11 comes from. 36 comes from the width of each tile including padding. 
+                    if (tile.type == ModLoader.GetMod("Tremor").TileType("IceChest"))
+                    {
+                        for (int inventoryIndex = 0; inventoryIndex < 40; inventoryIndex++)
+                        {
+                            if (chest.item[inventoryIndex].type == 0)
+                            {
+                                chest.item[inventoryIndex].SetDefaults(itemsToPlaceInIceChests[itemsToPlaceInIceChestsChoice]);
+                                itemsToPlaceInIceChestsChoice = (itemsToPlaceInIceChestsChoice + 1) % itemsToPlaceInIceChests.Length;
+                                //  Alternate approach: Random instead of cyclical: chest.item[inventoryIndex].SetDefaults(Main.rand.Next(itemsToPlaceInIceChests));
+                                break;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
