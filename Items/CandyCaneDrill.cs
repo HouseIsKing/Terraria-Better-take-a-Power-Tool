@@ -9,7 +9,7 @@ namespace BettertakeaPowerTool.Items
 		public override void SetStaticDefaults()
 		{
 			DisplayName.SetDefault("Candy Cane Drill");
-			Tooltip.SetDefault("Can mine Meteorite");
+            Tooltip.SetDefault("Can mine Meteorite");
 			Tooltip.AddTranslation(GameCulture.German, "Kann Meteorite abbauen");
 			Tooltip.AddTranslation(GameCulture.Italian, "Può estrarre meteorite");
 			Tooltip.AddTranslation(GameCulture.French, "Peut extraire de la météorite");
