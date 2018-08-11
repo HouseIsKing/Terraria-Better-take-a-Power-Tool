@@ -4,7 +4,7 @@ using Terraria.ModLoader;
 
 namespace BettertakeaPowerTool.Projectiles.Tremor
 {
-	public class BronzeJackhamsaw : ModProjectile
+	public class NorthJackhammer : ModProjectile
 	{
         public override void SetDefaults()
 		{
@@ -21,7 +21,7 @@ namespace BettertakeaPowerTool.Projectiles.Tremor
             if (tremor != null)
 			{
 				projectile.frameCounter++;
-				if (projectile.frameCounter >= 5.4f)
+				if (projectile.frameCounter >= 5.33333333333f)
 				{
 					projectile.frameCounter = 0;
 					projectile.frame = (projectile.frame + 1) % 4;
