@@ -103,21 +103,69 @@ namespace BettertakeaPowerTool
 			}
 
 			Mod tremor = ModLoader.GetMod("Tremor");
-            if (tremor != null && context == "bossBag" && arg == tremor.ItemType("TikiTotemBag"))
-            { 
-				if (Main.rand.Next(3) == 0)
-				{
-					if (Main.rand.Next(2) == 0)
-					{
-						player.QuickSpawnItem(mod.ItemType("DrillofBloom"));
-					}
-					else
-					{
-						player.QuickSpawnItem(ModLoader.GetMod("Tremor").ItemType("PickaxeofBloom"));
-					}
-				}
-				NPCLoader.blockLoot.Add(ModLoader.GetMod("Tremor").ItemType("PickaxeofBloom"));
-			}
+            if (tremor != null)
+            {
+                if (context == "bossBag" && arg == tremor.ItemType("TikiTotemBag"))
+                {
+                    if (Main.rand.Next(3) == 0)
+                    {
+                        if (Main.rand.Next(2) == 0)
+                        {
+                            player.QuickSpawnItem(mod.ItemType("DrillofBloom"));
+                        }
+                        else
+                        {
+                            player.QuickSpawnItem(ModLoader.GetMod("Tremor").ItemType("PickaxeofBloom"));
+                        }
+                    }
+                    NPCLoader.blockLoot.Add(ModLoader.GetMod("Tremor").ItemType("PickaxeofBloom"));
+                }
+                if (context == "bossBag" && arg == tremor.ItemType("TrinityBag1"))
+                {
+                    if (Main.rand.Next(3) == 0)
+                    {
+                        if (Main.rand.Next(2) == 0)
+                        {
+                            player.QuickSpawnItem(mod.ItemType("Banjackhammer"));
+                        }
+                        else
+                        {
+                            player.QuickSpawnItem(ModLoader.GetMod("Tremor").ItemType("Banhammer"));
+                        }
+                    }
+                    NPCLoader.blockLoot.Add(ModLoader.GetMod("Tremor").ItemType("Banhammer"));
+                }
+                if (context == "bossBag" && arg == tremor.ItemType("TrinityBag2"))
+                {
+                    if (Main.rand.Next(3) == 0)
+                    {
+                        if (Main.rand.Next(2) == 0)
+                        {
+                            player.QuickSpawnItem(mod.ItemType("Banjackhammer"));
+                        }
+                        else
+                        {
+                            player.QuickSpawnItem(ModLoader.GetMod("Tremor").ItemType("Banhammer"));
+                        }
+                    }
+                    NPCLoader.blockLoot.Add(ModLoader.GetMod("Tremor").ItemType("Banhammer"));
+                }
+                if (context == "bossBag" && arg == tremor.ItemType("TrinityBag3"))
+                {
+                    if (Main.rand.Next(3) == 0)
+                    {
+                        if (Main.rand.Next(2) == 0)
+                        {
+                            player.QuickSpawnItem(mod.ItemType("Banjackhammer"));
+                        }
+                        else
+                        {
+                            player.QuickSpawnItem(ModLoader.GetMod("Tremor").ItemType("Banhammer"));
+                        }
+                    }
+                    NPCLoader.blockLoot.Add(ModLoader.GetMod("Tremor").ItemType("Banhammer"));
+                }
+            }
 			return true;
 		}
 	}
