@@ -103,18 +103,6 @@ namespace BettertakeaPowerTool
                 NPCLoader.blockLoot.Add(ItemID.EyeoftheGolem);
                 NPCLoader.blockLoot.Add(ItemID.SunStone);
             }
-            if (npc.type == NPCID.WallofFlesh && !Main.expertMode)
-            {//decides what wall flash should drop if not on expert mode.
-                if (Main.rand.Next(2) == 0)
-                {
-                    Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, mod.ItemType("Pwnjackhammer"));
-                }
-                else
-                {
-                    Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, ItemID.Pwnhammer);
-                }
-                NPCLoader.blockLoot.Add(ItemID.Pwnhammer);
-            }
             if (npc.type == NPCID.Plantera && !Main.expertMode)
             {//Decides what plantera should drop if not in expert mode.
                 if (Main.rand.Next(50) == 0)
@@ -131,6 +119,57 @@ namespace BettertakeaPowerTool
                 NPCLoader.blockLoot.Add(ItemID.TheAxe);
             }
             Mod tremor = ModLoader.GetMod("Tremor");
+            if (npc.type == NPCID.WallofFlesh && !Main.expertMode)
+            {//decides what wall flash should drop if not on expert mode.
+                if (tremor != null && Config.DommhammerjackhammerSettings == 1)
+                {
+                    if (Main.rand.Next(2) == 0)
+                    {
+                        if (Main.rand.Next(2) == 0)
+                        {
+                            Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, mod.ItemType("Pwnjackhammer"));
+                        }
+                        else
+                        {
+                            Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, ItemID.Pwnhammer);
+                        }
+                    }
+                    else
+                    {
+                        if (Main.rand.Next(2) == 0)
+                        {
+                            Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, mod.ItemType("Doomjackhammer"));
+                        }
+                        else
+                        {
+                            Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, ModLoader.GetMod("Tremor").ItemType("Doomhammer"));
+                        }
+                    }
+                }
+                else if (tremor != null && Config.DommhammerjackhammerSettings == 2)
+                {
+                    if (Main.rand.Next(2) == 0)
+                    {
+                        Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, mod.ItemType("Doomjackhammer"));
+                    }
+                    else
+                    {
+                        Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, ModLoader.GetMod("Tremor").ItemType("Doomhammer"));
+                    }
+                }
+                else
+                {
+                    if (Main.rand.Next(2) == 0)
+                    {
+                        Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, mod.ItemType("Pwnjackhammer"));
+                    }
+                    else
+                    {
+                        Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, ItemID.Pwnhammer);
+                    }
+                }
+                NPCLoader.blockLoot.Add(ItemID.Pwnhammer);
+            }
             if (tremor != null && npc.type == NPCID.UndeadViking)
             {
                 if (Main.rand.Next(32) == 0)
