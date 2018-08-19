@@ -142,7 +142,7 @@ namespace BettertakeaPowerTool
                         }
                         else
                         {
-                            Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, ModLoader.GetMod("Tremor").ItemType("Doomhammer"));
+                            Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, tremor.ItemType("Doomhammer"));
                         }
                     }
                 }
@@ -154,7 +154,7 @@ namespace BettertakeaPowerTool
                     }
                     else
                     {
-                        Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, ModLoader.GetMod("Tremor").ItemType("Doomhammer"));
+                        Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, tremor.ItemType("Doomhammer"));
                     }
                 }
                 else
@@ -180,10 +180,10 @@ namespace BettertakeaPowerTool
                     }
                     else
                     {
-                        Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, ModLoader.GetMod("Tremor").ItemType("NorthAxe"));
+                        Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, tremor.ItemType("NorthAxe"));
                     }
                 }
-                NPCLoader.blockLoot.Add(ModLoader.GetMod("Tremor").ItemType("NorthAxe"));
+                NPCLoader.blockLoot.Add(tremor.ItemType("NorthAxe"));
                 if (Main.rand.Next(32) == 0)
                 {
                     if (Main.rand.Next(2) == 0)
@@ -192,10 +192,10 @@ namespace BettertakeaPowerTool
                     }
                     else
                     {
-                        Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, ModLoader.GetMod("Tremor").ItemType("NorthHammer"));
+                        Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, tremor.ItemType("NorthHammer"));
                     }
                 }
-                NPCLoader.blockLoot.Add(ModLoader.GetMod("Tremor").ItemType("NorthHammer"));
+                NPCLoader.blockLoot.Add(tremor.ItemType("NorthHammer"));
             }
             if (tremor != null && npc.type == tremor.NPCType("TikiTotem") && !Main.expertMode)
             {
@@ -207,10 +207,10 @@ namespace BettertakeaPowerTool
                     }
                     else
                     {
-                        Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, ModLoader.GetMod("Tremor").ItemType("PickaxeofBloom"));
+                        Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, tremor.ItemType("PickaxeofBloom"));
                     }
                 }
-                NPCLoader.blockLoot.Add(ModLoader.GetMod("Tremor").ItemType("PickaxeofBloom"));
+                NPCLoader.blockLoot.Add(tremor.ItemType("PickaxeofBloom"));
             }
             if (tremor != null && npc.type == tremor.NPCType("SoulofHope") && !Main.expertMode)
             {
@@ -222,10 +222,10 @@ namespace BettertakeaPowerTool
                     }
                     else
                     {
-                        Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, ModLoader.GetMod("Tremor").ItemType("Banhammer"));
+                        Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, tremor.ItemType("Banhammer"));
                     }
                 }
-                NPCLoader.blockLoot.Add(ModLoader.GetMod("Tremor").ItemType("Banhammer"));
+                NPCLoader.blockLoot.Add(tremor.ItemType("Banhammer"));
             }
             return true;
         }
