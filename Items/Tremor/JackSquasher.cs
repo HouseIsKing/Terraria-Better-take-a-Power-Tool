@@ -44,12 +44,17 @@ namespace BettertakeaPowerTool.Items.Tremor
             if (tremor != null)
             {
                 ModRecipe recipe = new ModRecipe(mod);
-                recipe.AddIngredient(mod.ItemType("Pwnjackhammer"));
-                recipe.AddIngredient(tremor.ItemType("DarkBulb"), 15);
-                recipe.AddIngredient(ItemID.Bone, 100);
-                recipe.AddTile(TileID.MythrilAnvil);
-                recipe.SetResult(this);
-                recipe.AddRecipe();
+                if (Config.DommhammerjackhammerSettings == 2)
+                {}
+                else
+                {
+                    recipe.AddIngredient(mod.ItemType("Pwnjackhammer"));
+                    recipe.AddIngredient(tremor.ItemType("DarkBulb"), 15);
+                    recipe.AddIngredient(ItemID.Bone, 100);
+                    recipe.AddTile(TileID.MythrilAnvil);
+                    recipe.SetResult(this);
+                    recipe.AddRecipe();
+                }
                 recipe = new ModRecipe(mod);
                 recipe.AddIngredient(mod.ItemType("Doomjackhammer"));
                 recipe.AddIngredient(tremor.ItemType("DarkBulb"), 15);
