@@ -1,10 +1,13 @@
 Better take a Power Tool adds new drills/chainsaws/jackhammers/jackhamsaws based on all pickaxes/axes/hammers/hamaxes that do not have a drill/chainsaw/jackhammer/jackhamsaw counterpart in Terraria.
+v1.5.0.1
+
+	Added Config to make the Doomhammer/Dommjackhammer obtainable
 
 v1.5
 
 	Added Ancient Jacksmasher, Banjackhammer, Brass Jackhammer & Drax, Frostjackammer, Ice Jackhammer, Sporchainsaw, North Chainsaw & Jackhammer, Doomjackhammer, JackSquasher & Frozen Drill Axe
 	Reworked sprites of all Wood & Metal Jackhammers, Bloody Massacre, Bone Drill, Candy Cane Drill, Spectre Drill & War Chainsaw of the Night
-	Tremor Update done all Tremor items in the Game expected for hardmode ore Jackhammers because I don't get permissions to use them
+	Tremor Update done all Tremor items in the Game except for hardmode ore Jackhammers because I don't get permissions to use them
 
 v1.4.5
 
