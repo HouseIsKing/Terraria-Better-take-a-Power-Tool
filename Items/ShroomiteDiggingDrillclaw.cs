@@ -7,7 +7,7 @@ namespace BettertakeaPowerTool.Items
 	{
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Shroomite Digging Drillclaw");
+			DisplayName.SetDefault("Shroomite Clawed Drill");
 		}
 		public override void SetDefaults()
 		{
