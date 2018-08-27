@@ -20,7 +20,11 @@ namespace BettertakeaPowerTool.Items
 			item.shoot = mod.ProjectileType("MoltenJackhamsaw");
 			item.shootSpeed = 40f;
 		}
-		public override void AddRecipes()
+        public override Color? GetAlpha(Color lightColor)
+        {
+            return Color.White;
+        }
+        public override void AddRecipes()
 		{
 			ModRecipe recipe = new ModRecipe(mod);
 			recipe.AddIngredient(ItemID.HellstoneBar, 15);
