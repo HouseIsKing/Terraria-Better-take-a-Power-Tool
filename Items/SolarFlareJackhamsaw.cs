@@ -1,3 +1,5 @@
+using Microsoft.Xna.Framework;
+using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
@@ -20,7 +22,15 @@ namespace BettertakeaPowerTool.Items
 			item.shoot = mod.ProjectileType("SolarFlareJackhamsaw");
 			item.shootSpeed = 40f;
 		}
-		public override void AddRecipes()
+        public override Color? GetAlpha(Color lightColor)
+        {
+            return Color.White;
+        }
+        public override void PostUpdate()
+        {
+            Lighting.AddLight(item.Center, 0.5f, 0.25f, 0.05f);
+        }
+        public override void AddRecipes()
 		{
 			ModRecipe recipe = new ModRecipe(mod);
 			recipe.AddIngredient(ItemID.FragmentSolar, 14);
