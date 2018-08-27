@@ -18,7 +18,7 @@ namespace BettertakeaPowerTool.Items.Tremor
             Mod tremor = ModLoader.GetMod("Tremor");
             if (tremor != null)
             {
-                item.CloneDefaults(ItemID.VortexDrill);
+                item.CloneDefaults(ItemID.SolarFlareDrill);
                 item.shoot = mod.ProjectileType("NovaDrill");
             }
         }
