@@ -4,11 +4,11 @@ using Terraria.ModLoader;
 
 namespace BettertakeaPowerTool.Projectiles.Tremor
 {
-	public class GlacierWoodJackhammer : ModProjectile
+	public class GlacierWoodJackhammerGustoneVersion : ModProjectile
 	{
 		public override void SetDefaults()
 		{
-            if (Config.WoodJackhammersSprite == 0)
+            if (Config.WoodJackhammersSprite == 2)
             {
                 Mod tremor = ModLoader.GetMod("Tremor");
                 if (tremor != null)
@@ -20,7 +20,7 @@ namespace BettertakeaPowerTool.Projectiles.Tremor
 		}
 		public override void AI()
 		{
-            if (Config.WoodJackhammersSprite == 0)
+            if (Config.WoodJackhammersSprite == 2)
             {
                 Mod tremor = ModLoader.GetMod("Tremor");
                 if (tremor != null)
