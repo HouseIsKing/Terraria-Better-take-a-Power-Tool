@@ -3,13 +3,11 @@ using Terraria.ModLoader;
 
 namespace BettertakeaPowerTool.Projectiles
 {
-    public class SpectreDrill : ModProjectile
+    public class SpectreDrillOld : ModProjectile
 	{
 		public override void SetDefaults()
 		{
             if (Config.OldSpectreDrillSprite)
-            { }
-            else
             {
                 projectile.CloneDefaults(ProjectileID.SawtoothShark);
             }

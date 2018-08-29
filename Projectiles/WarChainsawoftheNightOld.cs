@@ -5,13 +5,11 @@ using Terraria.ModLoader;
 
 namespace BettertakeaPowerTool.Projectiles
 {
-	public class WarChainsawoftheNight : ModProjectile
+	public class WarChainsawoftheNightOld : ModProjectile
 	{
 		public override void SetDefaults()
 		{
             if (Config.OldWarChainsawoftheNightSprite)
-            { }
-            else
             {
                 projectile.CloneDefaults(ProjectileID.CobaltDrill);
             }
@@ -20,8 +18,6 @@ namespace BettertakeaPowerTool.Projectiles
 		public override void AI()
 		{
             if (Config.OldWarChainsawoftheNightSprite)
-            { }
-            else
             {
                 int dust = Dust.NewDust(projectile.position, projectile.width, projectile.height, 14, projectile.velocity.X * 0.1f, projectile.velocity.Y * 0.1f, 100, default(Color), 1.5f);
                 Main.dust[dust].noGravity = true;
