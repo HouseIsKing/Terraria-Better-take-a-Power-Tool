@@ -8,17 +8,23 @@ namespace BettertakeaPowerTool.Projectiles
 	{
 		public override void SetDefaults()
 		{
-			projectile.CloneDefaults(ProjectileID.CobaltDrill);
-			Main.projFrames[projectile.type] = 4;
+            if (Config.WoodJackhammersSprite == 0)
+            {
+                projectile.CloneDefaults(ProjectileID.CobaltDrill);
+                Main.projFrames[projectile.type] = 4;
+            }
 		}
 		public override void AI()
 		{
-			projectile.frameCounter++;
-			if (projectile.frameCounter >= 6.66666666667f)
-			{
-				projectile.frameCounter = 0;
-				projectile.frame = (projectile.frame + 1) % 4;
-			}
+            if (Config.WoodJackhammersSprite == 0)
+            {
+                projectile.frameCounter++;
+                if (projectile.frameCounter >= 6.66666666667f)
+                {
+                    projectile.frameCounter = 0;
+                    projectile.frame = (projectile.frame + 1) % 4;
+                }
+            }
 		}
 	}
 }
