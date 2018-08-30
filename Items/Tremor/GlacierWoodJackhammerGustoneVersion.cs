@@ -3,11 +3,11 @@ using Terraria.ModLoader;
 
 namespace BettertakeaPowerTool.Items.Tremor
 {
-	public class GlacierWoodJackhammer : ModItem
+	public class GlacierWoodJackhammerGustoneVersion : ModItem
 	{
 		public override void SetStaticDefaults()
 		{
-            if (Config.WoodJackhammersSprite == 0)
+            if (Config.WoodJackhammersSprite == 2)
             {
                 Mod tremor = ModLoader.GetMod("Tremor");
                 if (tremor != null)
@@ -18,7 +18,7 @@ namespace BettertakeaPowerTool.Items.Tremor
 		}
         public override void SetDefaults()
         {
-            if (Config.WoodJackhammersSprite == 0)
+            if (Config.WoodJackhammersSprite == 2)
             {
                 Mod tremor = ModLoader.GetMod("Tremor");
                 if (tremor != null)
@@ -29,14 +29,14 @@ namespace BettertakeaPowerTool.Items.Tremor
                     item.noMelee = true;
                     item.useStyle = 5;
                     item.UseSound = SoundID.Item23;
-                    item.shoot = mod.ProjectileType("GlacierWoodJackhammer");
+                    item.shoot = mod.ProjectileType("GlacierWoodJackhammerGustoneVersion");
                     item.shootSpeed = 40f;
                 }
             }
         }
         public override void AddRecipes()
         {
-            if (Config.WoodJackhammersSprite == 0)
+            if (Config.WoodJackhammersSprite == 2)
             {
                 Mod tremor = ModLoader.GetMod("Tremor");
                 if (tremor != null)
@@ -47,7 +47,7 @@ namespace BettertakeaPowerTool.Items.Tremor
                     recipe.SetResult(this);
                     recipe.AddRecipe();
                     recipe = new ModRecipe(mod);
-                    recipe.AddIngredient(mod.ItemType("GlacierWoodJackhammerGustoneVersion"));
+                    recipe.AddIngredient(mod.ItemType("GlacierWoodJackhammer"));
                     recipe.SetResult(this);
                     recipe.AddRecipe();
                     recipe = new ModRecipe(mod);
