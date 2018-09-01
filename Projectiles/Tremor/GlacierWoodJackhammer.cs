@@ -8,29 +8,27 @@ namespace BettertakeaPowerTool.Projectiles.Tremor
 	{
 		public override void SetDefaults()
 		{
-            if (Config.WoodJackhammersSprite == 0)
+            Mod tremor = ModLoader.GetMod("Tremor");
+            if (tremor != null)
             {
-                Mod tremor = ModLoader.GetMod("Tremor");
-                if (tremor != null)
-                {
-                    projectile.CloneDefaults(ProjectileID.CobaltDrill);
-                    Main.projFrames[projectile.type] = 4;
-                }
+                projectile.CloneDefaults(ProjectileID.CobaltDrill);
+                Main.projFrames[projectile.type] = 4;
             }
 		}
-		public override void AI()
+        public override string Texture
+        {
+            get { return "BettertakeaPowerTool/Projectiles/Tremor/GlacierWoodJackhammer" + Config.OldWoodJackhammersSprite + Config.GustoneVersionWoodJackhammersSprite; }
+        }
+        public override void AI()
 		{
-            if (Config.WoodJackhammersSprite == 0)
+            Mod tremor = ModLoader.GetMod("Tremor");
+            if (tremor != null)
             {
-                Mod tremor = ModLoader.GetMod("Tremor");
-                if (tremor != null)
+                projectile.frameCounter++;
+                if (projectile.frameCounter >= 6.66666666667f)
                 {
-                    projectile.frameCounter++;
-                    if (projectile.frameCounter >= 6.66666666667f)
-                    {
-                        projectile.frameCounter = 0;
-                        projectile.frame = (projectile.frame + 1) % 4;
-                    }
+                    projectile.frameCounter = 0;
+                    projectile.frame = (projectile.frame + 1) % 4;
                 }
             }
 		}
