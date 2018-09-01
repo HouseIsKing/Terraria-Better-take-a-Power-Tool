@@ -7,19 +7,14 @@ namespace BettertakeaPowerTool.Items.Tremor
 	{
 		public override void SetStaticDefaults()
 		{
-            if (Config.WoodJackhammersSprite == 0)
-            {
                 Mod tremor = ModLoader.GetMod("Tremor");
                 if (tremor != null)
                 {
                     DisplayName.SetDefault("Glacier Wood Jackhammer");
                 }
-            }
 		}
         public override void SetDefaults()
         {
-            if (Config.WoodJackhammersSprite == 0)
-            {
                 Mod tremor = ModLoader.GetMod("Tremor");
                 if (tremor != null)
                 {
@@ -32,29 +27,21 @@ namespace BettertakeaPowerTool.Items.Tremor
                     item.shoot = mod.ProjectileType("GlacierWoodJackhammer");
                     item.shootSpeed = 40f;
                 }
-            }
+        }
+        public override string Texture
+        {
+            get { return "BettertakeaPowerTool/Items/Tremor/GlacierWoodJackhammer" + Config.OldWoodJackhammersSprite + Config.GustoneVersionWoodJackhammersSprite; }
         }
         public override void AddRecipes()
         {
-            if (Config.WoodJackhammersSprite == 0)
+            Mod tremor = ModLoader.GetMod("Tremor");
+            if (tremor != null)
             {
-                Mod tremor = ModLoader.GetMod("Tremor");
-                if (tremor != null)
-                {
-                    ModRecipe recipe = new ModRecipe(mod);
-                    recipe.AddIngredient(tremor.ItemType("GlacierWood"), 8);
-                    recipe.AddTile(TileID.WorkBenches);
-                    recipe.SetResult(this);
-                    recipe.AddRecipe();
-                    recipe = new ModRecipe(mod);
-                    recipe.AddIngredient(mod.ItemType("GlacierWoodJackhammerGustoneVersion"));
-                    recipe.SetResult(this);
-                    recipe.AddRecipe();
-                    recipe = new ModRecipe(mod);
-                    recipe.AddIngredient(mod.ItemType("GlacierWoodJackhammerOld"));
-                    recipe.SetResult(this);
-                    recipe.AddRecipe();
-                }
+                ModRecipe recipe = new ModRecipe(mod);
+                recipe.AddIngredient(tremor.ItemType("GlacierWood"), 8);
+                recipe.AddTile(TileID.WorkBenches);
+                recipe.SetResult(this);
+                recipe.AddRecipe();
             }
         }
 	}
