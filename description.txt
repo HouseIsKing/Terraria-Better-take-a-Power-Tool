@@ -1,7 +1,10 @@
 Better take a Power Tool adds new drills/chainsaws/jackhammers/jackhamsaws based on all pickaxes/axes/hammers/hamaxes that do not have a drill/chainsaw/jackhammer/jackhamsaw counterpart in Terraria.
 v1.5.0.1
 
-	Added Config to make the Doomhammer/Dommjackhammer obtainable
+	Added Config to make the Doomhammer/Dommjackhammer obtainable, to Buff the Lunar Drills & to Switch betwean old and new sprites
+	Added Glow effect for the Dropped item version of the Jackhamshroom, Molten Drill & Jackhamsaw & the Lunar Jackhamsaws
+	Fixed Flesh Smasher Sprite
+	Changed the name of the Shroomite Digging Drillclaw to Shroomite Clawed Drill
 
 v1.5
 
