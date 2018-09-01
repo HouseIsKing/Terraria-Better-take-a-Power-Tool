@@ -7,7 +7,11 @@ namespace BettertakeaPowerTool.Projectiles
 	{
 		public override void SetDefaults()
 		{
-			projectile.CloneDefaults(ProjectileID.SawtoothShark);
+                projectile.CloneDefaults(ProjectileID.SawtoothShark);
 		}
-	}
+        public override string Texture
+        {
+            get { return "BettertakeaPowerTool/Projectiles/SpectreDrill" + Config.OldSpectreDrillSprite; }
+        }
+    }
 }

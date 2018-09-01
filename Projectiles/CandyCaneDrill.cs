@@ -7,7 +7,11 @@ namespace BettertakeaPowerTool.Projectiles
 	{
 		public override void SetDefaults()
 		{
-			projectile.CloneDefaults(ProjectileID.CobaltDrill);
-		}
-	}
+                projectile.CloneDefaults(ProjectileID.CobaltDrill);
+        }
+        public override string Texture
+        {
+            get { return "BettertakeaPowerTool/Projectiles/CandyCaneDrill" + Config.OldCandyCaneDrillSprite; }
+        }
+    }
 }

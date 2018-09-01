@@ -1,3 +1,4 @@
+using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
@@ -11,7 +12,11 @@ namespace BettertakeaPowerTool.Projectiles
 			projectile.CloneDefaults(ProjectileID.SawtoothShark);
 			Main.projFrames[projectile.type] = 4;
 		}
-		public override void AI()
+        public override Color? GetAlpha(Color lightColor)
+        {
+            return Color.White;
+        }
+        public override void AI()
 		{
 			projectile.frameCounter++;
 			if (projectile.frameCounter >= 3f)

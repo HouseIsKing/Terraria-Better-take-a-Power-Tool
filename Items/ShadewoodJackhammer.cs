@@ -7,26 +7,30 @@ namespace BettertakeaPowerTool.Items
 	{
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Shadewood Jackhammer");
+                DisplayName.SetDefault("Shadewood Jackhammer");
 		}
 		public override void SetDefaults()
 		{
-			item.CloneDefaults(ItemID.ShadewoodHammer);
-			item.channel = true;
-			item.noUseGraphic = true;
-			item.noMelee = true;
-			item.useStyle = 5;
-			item.UseSound = SoundID.Item23;
-			item.shoot = mod.ProjectileType("ShadewoodJackhammer");
-			item.shootSpeed = 40f;
+                item.CloneDefaults(ItemID.ShadewoodHammer);
+                item.channel = true;
+                item.noUseGraphic = true;
+                item.noMelee = true;
+                item.useStyle = 5;
+                item.UseSound = SoundID.Item23;
+                item.shoot = mod.ProjectileType("ShadewoodJackhammer");
+                item.shootSpeed = 40f;
 		}
-		public override void AddRecipes()
-		{
-			ModRecipe recipe = new ModRecipe(mod);
-			recipe.AddIngredient(ItemID.Shadewood, 8);
-			recipe.AddTile(TileID.WorkBenches);
-			recipe.SetResult(this);
-			recipe.AddRecipe();
-		}
+        public override string Texture
+        {
+            get { return "BettertakeaPowerTool/Items/ShadewoodJackhammer" + Config.OldWoodJackhammersSprite + Config.GustoneVersionWoodJackhammersSprite; }
+        }
+        public override void AddRecipes()
+        {
+            ModRecipe recipe = new ModRecipe(mod);
+            recipe.AddIngredient(ItemID.Shadewood, 8);
+            recipe.AddTile(TileID.WorkBenches);
+            recipe.SetResult(this);
+            recipe.AddRecipe();
+        }
 	}
 }

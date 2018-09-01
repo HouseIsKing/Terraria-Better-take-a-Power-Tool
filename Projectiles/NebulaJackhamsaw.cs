@@ -5,8 +5,8 @@ using Terraria.ModLoader;
 namespace BettertakeaPowerTool.Projectiles
 {
     public class NebulaJackhamsaw : ModProjectile
-	{
-		public override void SetDefaults()
+    {
+        public override void SetDefaults()
 		{
 			projectile.CloneDefaults(ProjectileID.SawtoothShark);
 			Main.projFrames[projectile.type] = 4;

@@ -74,18 +74,6 @@ namespace BettertakeaPowerTool
                 NPCLoader.blockLoot.Add(ItemID.EyeoftheGolem);
                 NPCLoader.blockLoot.Add(ItemID.SunStone);
             }
-            if (context == "bossBag" && arg == ItemID.WallOfFleshBossBag)
-            {//decides what wall flash boss bag should drop.
-                if (Main.rand.Next(2) == 0)
-				{
-					player.QuickSpawnItem(mod.ItemType("Pwnjackhammer"));
-                }
-                else
-                {
-                    player.QuickSpawnItem(ItemID.Pwnhammer);
-                }
-            }
-            NPCLoader.blockLoot.Add(ItemID.Pwnhammer);
             if (context == "bossBag" && arg == ItemID.PlanteraBossBag) 
 			{//Decides what plantera boss bag should drop.
 				if (Main.rand.Next(20) == 0)
@@ -101,8 +89,58 @@ namespace BettertakeaPowerTool
 				}
 				NPCLoader.blockLoot.Add(ItemID.TheAxe);
 			}
-
-			Mod tremor = ModLoader.GetMod("Tremor");
+            Mod tremor = ModLoader.GetMod("Tremor");
+            if (context == "bossBag" && arg == ItemID.WallOfFleshBossBag)
+            {//decides what wall flash boss bag should drop.
+                if (tremor != null && Config.DommhammerjackhammerSettings == 1)
+                {
+                    if (Main.rand.Next(2) == 0)
+                    {
+                        if (Main.rand.Next(2) == 0)
+                        {
+                            player.QuickSpawnItem(mod.ItemType("Pwnjackhammer"));
+                        }
+                        else
+                        {
+                            player.QuickSpawnItem(ItemID.Pwnhammer);
+                        }
+                    }
+                    else
+                    {
+                        if (Main.rand.Next(2) == 0)
+                        {
+                            player.QuickSpawnItem(mod.ItemType("Doomjackhammer"));
+                        }
+                        else
+                        {
+                            player.QuickSpawnItem(tremor.ItemType("Doomhammer"));
+                        }
+                    }
+                }
+                else if (tremor != null && Config.DommhammerjackhammerSettings == 2)
+                {
+                    if (Main.rand.Next(2) == 0)
+                    {
+                        player.QuickSpawnItem(mod.ItemType("Doomjackhammer"));
+                    }
+                    else
+                    {
+                        player.QuickSpawnItem(tremor.ItemType("Doomhammer"));
+                    }
+                }
+                else
+                {
+                    if (Main.rand.Next(2) == 0)
+                    {
+                        player.QuickSpawnItem(mod.ItemType("Pwnjackhammer"));
+                    }
+                    else
+                    {
+                        player.QuickSpawnItem(ItemID.Pwnhammer);
+                    }
+                }
+                NPCLoader.blockLoot.Add(ItemID.Pwnhammer);
+            }
             if (tremor != null)
             {
                 if (context == "bossBag" && arg == tremor.ItemType("TikiTotemBag"))
@@ -115,10 +153,10 @@ namespace BettertakeaPowerTool
                         }
                         else
                         {
-                            player.QuickSpawnItem(ModLoader.GetMod("Tremor").ItemType("PickaxeofBloom"));
+                            player.QuickSpawnItem(tremor.ItemType("PickaxeofBloom"));
                         }
                     }
-                    NPCLoader.blockLoot.Add(ModLoader.GetMod("Tremor").ItemType("PickaxeofBloom"));
+                    NPCLoader.blockLoot.Add(tremor.ItemType("PickaxeofBloom"));
                 }
                 if (context == "bossBag" && arg == tremor.ItemType("TrinityBag1"))
                 {
@@ -130,10 +168,10 @@ namespace BettertakeaPowerTool
                         }
                         else
                         {
-                            player.QuickSpawnItem(ModLoader.GetMod("Tremor").ItemType("Banhammer"));
+                            player.QuickSpawnItem(tremor.ItemType("Banhammer"));
                         }
                     }
-                    NPCLoader.blockLoot.Add(ModLoader.GetMod("Tremor").ItemType("Banhammer"));
+                    NPCLoader.blockLoot.Add(tremor.ItemType("Banhammer"));
                 }
                 if (context == "bossBag" && arg == tremor.ItemType("TrinityBag2"))
                 {
@@ -145,10 +183,10 @@ namespace BettertakeaPowerTool
                         }
                         else
                         {
-                            player.QuickSpawnItem(ModLoader.GetMod("Tremor").ItemType("Banhammer"));
+                            player.QuickSpawnItem(tremor.ItemType("Banhammer"));
                         }
                     }
-                    NPCLoader.blockLoot.Add(ModLoader.GetMod("Tremor").ItemType("Banhammer"));
+                    NPCLoader.blockLoot.Add(tremor.ItemType("Banhammer"));
                 }
                 if (context == "bossBag" && arg == tremor.ItemType("TrinityBag3"))
                 {
@@ -160,10 +198,10 @@ namespace BettertakeaPowerTool
                         }
                         else
                         {
-                            player.QuickSpawnItem(ModLoader.GetMod("Tremor").ItemType("Banhammer"));
+                            player.QuickSpawnItem(tremor.ItemType("Banhammer"));
                         }
                     }
-                    NPCLoader.blockLoot.Add(ModLoader.GetMod("Tremor").ItemType("Banhammer"));
+                    NPCLoader.blockLoot.Add(tremor.ItemType("Banhammer"));
                 }
             }
 			return true;

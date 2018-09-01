@@ -20,7 +20,7 @@ namespace BettertakeaPowerTool.Items
 			item.shoot = mod.ProjectileType("MeteorJackhamsaw");
 			item.shootSpeed = 40f;
 		}
-		public override void AddRecipes()
+        public override void AddRecipes()
 		{
 			ModRecipe recipe = new ModRecipe(mod);
 			recipe.AddIngredient(ItemID.MeteoriteBar, 20);

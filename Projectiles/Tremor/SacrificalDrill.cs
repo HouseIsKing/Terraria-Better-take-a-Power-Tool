@@ -12,7 +12,7 @@ namespace BettertakeaPowerTool.Projectiles.Tremor
             Mod tremor = ModLoader.GetMod("Tremor");
             if (tremor != null)
 			{
-				projectile.CloneDefaults(ProjectileID.CobaltDrill);
+				projectile.CloneDefaults(ProjectileID.SawtoothShark);
 			}
 		}
 		public override void AI()

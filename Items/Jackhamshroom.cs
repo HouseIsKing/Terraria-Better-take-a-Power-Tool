@@ -1,4 +1,5 @@
-﻿using Terraria.ID;
+﻿using Microsoft.Xna.Framework;
+using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.Localization;
 
@@ -30,5 +31,9 @@ namespace BettertakeaPowerTool.Items
 			item.shoot = mod.ProjectileType("Jackhamshroom");
 			item.shootSpeed = 40f;
 		}
-	}
+        public override Color? GetAlpha(Color lightColor)
+        {
+            return Color.White;
+        }
+    }
 }

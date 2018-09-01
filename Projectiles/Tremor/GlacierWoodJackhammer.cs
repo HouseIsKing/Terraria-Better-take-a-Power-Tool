@@ -15,7 +15,11 @@ namespace BettertakeaPowerTool.Projectiles.Tremor
                 Main.projFrames[projectile.type] = 4;
             }
 		}
-		public override void AI()
+        public override string Texture
+        {
+            get { return "BettertakeaPowerTool/Projectiles/Tremor/GlacierWoodJackhammer" + Config.OldWoodJackhammersSprite + Config.GustoneVersionWoodJackhammersSprite; }
+        }
+        public override void AI()
 		{
             Mod tremor = ModLoader.GetMod("Tremor");
             if (tremor != null)

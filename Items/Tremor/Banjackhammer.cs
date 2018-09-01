@@ -33,7 +33,11 @@ namespace BettertakeaPowerTool.Items.Tremor
 		}
         public override void ModifyTooltips(List<TooltipLine> tooltips)
         {
-            tooltips[0].overrideColor = new Color(238, 194, 73);
+            Mod tremor = ModLoader.GetMod("Tremor");
+            if (tremor != null)
+            {
+                tooltips[0].overrideColor = new Color(238, 194, 73);
+            }
         }
     }
 }

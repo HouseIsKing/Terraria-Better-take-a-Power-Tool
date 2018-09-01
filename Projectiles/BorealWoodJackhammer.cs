@@ -8,17 +8,21 @@ namespace BettertakeaPowerTool.Projectiles
 	{
 		public override void SetDefaults()
 		{
-			projectile.CloneDefaults(ProjectileID.CobaltDrill);
-			Main.projFrames[projectile.type] = 4;
+                projectile.CloneDefaults(ProjectileID.CobaltDrill);
+                Main.projFrames[projectile.type] = 4;
 		}
-		public override void AI()
+        public override string Texture
+        {
+            get { return "BettertakeaPowerTool/Projectiles/BorealWoodJackhammer" + Config.OldWoodJackhammersSprite + Config.GustoneVersionWoodJackhammersSprite; }
+        }
+        public override void AI()
 		{
-			projectile.frameCounter++;
-			if (projectile.frameCounter >= 6.66666666667f)
-			{
-				projectile.frameCounter = 0;
-				projectile.frame = (projectile.frame + 1) % 4;
-			}
+                projectile.frameCounter++;
+                if (projectile.frameCounter >= 6.66666666667f)
+                {
+                    projectile.frameCounter = 0;
+                    projectile.frame = (projectile.frame + 1) % 4;
+                }
 		}
 	}
 }
